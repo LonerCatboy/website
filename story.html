@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original content! </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 style="padding: 0; margin-top: 1rem; margin-bottom: 0.5rem;">
+                Loner Catboy's Original Content
+            </h1>
+            <nav>
+                <div>
+                    <a href="index.html">
+                        <button class="button--netscape">
+                            <span style="font-size: 0.5rem;">🠈</span> Back
+                        </button>
+                    </a>
+                </div>
+                <div>
+                    <a href="diary.html">
+                        <button class="button--netscape">
+                            Blog
+                        </button>
+                    </a>
+                </div>
+
+                <div>
+                    <button class="button--netscape" onclick="toggleTheme()">Change theme</em>
+                    </button>
+                </div>
+
+            </nav>
+        </div>
+        <div></div>
+    </header>
+
+    <main style="min-height: 88.5vh;">
+        <div class="content">
+            <h1 style="text-align: center;"> - Warning - </h1>
+            <h2 style="text-align: center;">
+                <img src="resources/icons/ITALY.png" class="img_icon img-decor hide-on-mobile"> Most of the content here is written
+                exclusively in italian
+                <img src="resources/icons/ITALY.png" class="img_icon img-decor hide-on-mobile">
+            </h2>
+            <h2> <i> Why is that? </i> </h2>
+            <p class="sub-content-small"> Because that's my language you silly!<br><br> Italian from now on. <br><br></p>
+
+            <h2>
+                Web Novel:
+            </h2>
+
+            <div>
+                <div>
+                    <button class="toggle--netscape big-text" type="button" aria-expanded="false">
+                        Re: 1999 - Destinazione finale
+                    </button>
+                    <div class="toggle-content" hidden style="max-width: 680px;">
+                        <p class="sub-content-small" style="text-align: justify;">
+                            Siamo alla fine del millennio. L’Italia è in piena era spaziale: è il trionfo della tecnica.
+                            <br><br>
+                            La navetta ministeriale Concordia, capitanata dal Dott. Ing. Olivetti Alessandro, naufraga in un pianeta remoto durante una missione in solitaria. Il contatto con la Terra è impossibile.
+                            <br><br>
+                            Il pianeta, rigoglioso e abitato, è sede di numerose società umanoidi organizzate in comunità preindustriali. L’Ing. Olivetti è attualmente isolato, con scorte limitate e senza un piano di estrazione definito.
+                            <br> <br> <br>
+                            Contiene (o conterrà) descrizioni esplicite.
+                            <br><br>
+                            Generi: <br>
+                            #Fantasy #Isekai #Yaoi #Avventura
+                        </p>
+
+                        <nav style="flex-direction: column;">
+                            <div>
+                                <a href="oc/re1999/ch1.html">
+                                    <button class="button--netscape" style="min-width: 200px;">
+                                        <span style="font-size: 1rem;">Leggi dall'inizio</span> 
+                                    </button>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="oc/re1999/ch1.html">
+                                    <button class="button--netscape" style="min-width: 200px;"">
+                                        <span style="font-size: 1rem;">Leggi il capitolo più recente</span> 
+                                    </button>
+                                </a>
+                            </div>            
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <nav> <a href="https://www.reddit.com/user/MiserableLonerCatboy/">
+                    <img src="resources/icons/EMAIL1.GIF" class="img_icon">
+                    DM Me!
+                </a></nav>
+        </div>
+        <div>
+            <span>
+                Loner Catboy - 2025
+            </span>
+        </div>
+        <div class="footer-right">
+            <span> <img src="resources/icons/TURBONET.GIF" class="logo">
+            </span>
+            <span><img src="resources/icons/WINDOWS.GIF" class="logo"></span>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButtons = document.querySelectorAll('.toggle--netscape');
+
+            toggleButtons.forEach(button => {
+                const content = button.nextElementSibling;
+
+                button.addEventListener('click', function () {
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    button.setAttribute('aria-expanded', String(!isExpanded));
+                    content.hidden = isExpanded;
+                    makeSound('click');
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

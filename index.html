@@ -1,29 +1,306 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il Mio Sito Statico</title>
+  <title>Loner Catboy's Webpage</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
-    <h1>Welcome to Loner Catboy's World Wide Web Page!</h1>
-    <h2 style="margin-left: 800px;">My ultimate safe space!</h2>
+    <img src="resources/decorations/nyan-cat.gif" alt="Nyan Cat" class="nyan-cat hide-on-mobile"
+      onclick="makeSound('explosion')">
+    <div>
+      <h1 style="padding: 0; margin: 0;">
+        <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+        Welcome to Loner Catboy's World Wide Web Page!
 
-    <nav>
-      <a href="index.html">
-        <img src="resources/ui/BUTTON25.GIF" class="img_icon">
-        Home
-      </a>
-      <a href="diary.html">Adventures I write (in italian)</a>
-      <a href="diary.html">Personal diary</a>
-    </nav>
+
+        <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+        <div class="minecraft-quote" id="quote-box">
+          Please enable Javascript!
+        </div>
+      </h1>
+      <h2 class="hide-on-very-small">
+        Uh, it's nice to have you t-there huh!
+      </h2>
+      <nav>
+        <div>
+          <a href="index.html"></a>
+          <button class="button--netscape">
+            Home
+          </button>
+          </a>
+        </div>
+        <div>
+          <a href="story.html">
+            <button class="button--netscape">
+              Original content
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="diary.html">
+            <button class="button--netscape">
+              Blog
+            </button>
+          </a>
+        </div>
+
+        <div>
+          <a href="friend.html">
+            <button class="button--netscape attention">
+              Looking for a friend?
+            </button>
+          </a>
+        </div>
+
+        <div>
+          <button class="button--netscape" onclick="toggleTheme()">Change theme</em>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+    <div></div>
   </header>
 
   <main>
-    <p>Uhm, t-thanks for visiting huh</p>
-    <h1>Who is me</h1>
+    <div class="content">
+      <h1>Hi there!</h1>
+      <p>
+        I'm Loner Catboy, also know as LC. I'm a computer scientist for half a day and a loner lost soul for the other
+        half <em>(this is supposed to sound badass) </em>.
+      </p>
+      <h2>
+        A bit about me...
+      </h2>
+      <p>Assuming I am alive, I am now a <span id="age">[please enable javascript]</span> years old boy/man.</p>
+
+      <p>
+        I live and work full time in Sardinia, Italy. <br>
+      </p>
+      <p>
+        In my free time I like to imagine scenarios (and sometimes write them down!) play games, read things here and
+        there, y'know the typical sort of asocial weirdo kind of stuff (we call that "cool" here)! <br>
+        I'm also studying a bit of Japanese, huh and I'm currently down for a master degree in AI.
+      </p>
+      <p>
+        Yeah I'm huh, trying to cram a lot of things at once actually though I sort of have many interests. <br>
+        Oh! Uhm, as you might have guessed by looking at this page huh I like cool vintage stuff. I'm mainly
+        interested
+        in
+        vintage audio equipment though.
+      </p>
+      <div class="sub-content">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2473069.345963819!2d10.190639946918393!3d40.301417958165985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1746096547442!5m2!1sit!2sit"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>
+          <em>Here I live! Somewhere.</em>
+        </p>
+      </div>
+      <p>
+        Oh, I also have a small collection of manga, even though I haven't bought new ones for a while (I'm broke
+        rip).
+        I
+        used to watch a lot of anime too, now much less (no much time left for those huh!). <br>
+        My current favourite ons is Frieren (the anime), yes I know it's actually nothing special but I loved the
+        bucolic
+        atmosphere (I love nature!!) and the soundtrack by Evan Call! In fact I ended up buying the soundtrack on CD.
+        <br>
+      </p>
+      <p>
+        Oh, yeah, music, that's another interest of mine. I mean not really an interest I just like it. <br>
+        I mainly listen to JPop and JRock but I don't disdain old school rock and pop either. I love the sound of
+        synthesizers thus I like most music from the 80s. <br>
+      </p>
+      <div class="sub-content-small">
+        <h2>My favourite artists:</h2>
+        <p class="sub-content-small">
+          <b>JPop / JRock:</b> <br>
+          Note: usually I'm not really into music videos but I really don't wanna share Spotify links and certaily I
+          cannot incorporate the audio files either (for obvious reasons)<br>
+          If you're interested look for them on your favourite music streaming platform. Or on Soulseek. <br><br>
+          <a href="https://www.youtube.com/watch?v=H_2jH6XVYU0&pp=ygUbYW5hcmNoeSBvZmZpY2lhbOmrreeUt2Rpc20g"
+            rel="external">Official Hige Dandism </a><br>
+          YOASOBI <br>
+          Vaundy <br>
+          Ryokuoushoku Shakai <br>
+          Nanase Aikawa <br>
+          Radwimps <br>
+          Imase <br>
+          Tricot <br>
+          <a href="https://www.youtube.com/watch?v=0xSiBpUdW4E" rel="external">Aymion</a> <br>
+          <b></b>
+          <br>
+
+        </p>
+      </div>
+
+      <div class="sub-content-small">
+        <h2 class="glow-blink">Youtuber I recommend!:</h2>
+        <p class="sub-content-small narrow-700">
+          1 - <a href="https://www.youtube.com/@CathodeRayDude" rel="external" class="glow-blink">Cathode Ray Dude</a>
+          //
+          <a href="https://www.youtube.com/watch?v=7mqkTFq7Ekg&t=1s" rel="external">His best video</a> <br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7mqkTFq7Ekg?si=9p1BRheeVYTYg308"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
+          Now, this dude's videos are long—like, an hour or more, most of them. But he's just so interesting that
+          you’ll
+          watch a whole hour and feel like only ten minutes have passed.
+          He really does have a talent for storytelling. He could talk about the most boring topic imaginable, and
+          you’d
+          still be hooked from start to finish. <br>
+          Wanna deep down into the history of <em>scanners</em>? Or perhaps you wanna see the weirdest mouse you've
+          never
+          seen? No? <br>
+          Yeah it doesn't sound that exciting does it? That's why he'll blew your mind. Or perhaps I'm just a mega
+          nerd
+          myself.
+        </p>
+        <p></p>
+        <p class="sub-content-small narrow-700">
+          2 - <a href="https://www.youtube.com/@Techmoan" rel="external" class="glow-blink">Techmoan</a> //
+          <a href="https://www.youtube.com/watch?v=3MQCkny4GJc" rel="external">Favorite video</a><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3MQCkny4GJc?si=ECf_a2u_cTcx_9ml"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
+          Not much to say about it, you probably already know him. He reviews cool old stuff, though he's mostly
+          focused
+          on audio equipment and vintage hifi. He's chill, his videos are relaxing with a touch of sillyness from time
+          to
+          time. Just lovely.
+
+        </p>
+
+        <p></p>
+        <p class="sub-content-small narrow-700">
+          3 - <a href="www.youtube.com/@HyperCubist" rel="external" class="glow-blink">HyperCubist</a> //
+          <a href="https://www.youtube.com/watch?v=SwGbHsBAcZ0" rel="external">Visualizind 4D</a><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SwGbHsBAcZ0?si=HS_ddGUXuaFF8UJZ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+          I don't remeber how I found this serie, made by the youtuber HyperCubist, but I've found it quite intriguing
+          especially the later episodes. This serie aim to the goal of helping the viewer visualizing 4dimensional
+          space
+          and geometry and it does that really well. <br>
+          There isn't much math involved either. Though it requires at least a bit of focus.
+
+        </p>
+
+        <p></p>
+        <p class="sub-content-small narrow-700">
+          4 - <a href="https://www.youtube.com/@zunda-theorem-en" rel="external" class="glow-blink">Zundamon's
+            Theorem</a>
+          //
+          <a href="https://www.youtube.com/watch?v=-iF9h9fePYk" rel="external">Tropical geometry</a><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-iF9h9fePYk?si=_U9-Zcixo5vDV8xs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+          THE CUTEST CHANNEL OF ALL!! <br>
+          This is a new discovery, so I really don't have much to say. This one I link is the only video I've viewed.
+          It's
+          another math channel (I'm not that much into pop math but somehow yt keeps recommending it to me). <br>
+          The catch here is that the problem are explained by two super cute anime characters, and they have like a
+          supeeeeerr cute voice, like it's so lovely. It's obviously fake yet so cute.
+          The math is (as it happens with most popmath content) quite basic and easy to follow.
+
+        </p>
+      </div>
+
+      <p></p>
+      <h1>
+        F.A.Q.
+      </h1>
+      <h2>
+        Why is your reddit username "MiserableLonerCatboy"?
+      </h2>
+      <p class="sub-content-small narrow-700">
+        Well two main reasons actually: <br>
+        First, I was in a <em>bad mood</em> the day I created that account <br>
+        Second, most importantly, it was supposed to be like a burner account for NSFW but I never used it like that.
+        <br>
+        I liked the Catboy part though. Not that I wear cat ears in public (I wish I had that confidence!!!!!) but can't
+        we all just agree that nekos are cute? <br>
+        Because they are! <br>
+        And despite the fact I am not a Catboy irl, I feel comfortable interacting online under a pseudonym which refer
+        to
+        that. <br>
+        Is that a crime? Not in my country.
+      </p>
+      <p></p>
+      <h2>
+        So ya look like a discord moderator or smth?
+      </h2>
+      <p class="sub-content-small narrow-700">
+        I said I don't look like a catboy in the sense that perhaps I'm not that cute, but no, I do not look like a
+        meme.
+        IRL, I look like a rather typical guy. No posture issues, skinny, clean. Plain normal, 100% not weirdo.
+        A lil bit on the smaller size. Someone might consider that cute. <br>
+        That someone should definitely check out the page "looking for a friend?" in the header. <br>
+      </p>
+      <p></p>
+      <h2>
+        So what's this thing about? A page about you? Are you a narcissist or smth?
+      </h2>
+      <p class="sub-content-small narrow-700">
+        This page is a mean of <span class="attention"> self expression. </span> <br>
+        That's all I need to explain. <br>
+        Call it a safe space or something. <br>
+      </p>
+
+    </div>
+    </div>
   </main>
+
+  <footer>
+    <div class="footer-left">
+      <nav> <a href="https://www.reddit.com/user/MiserableLonerCatboy/">
+          <img src="resources/icons/EMAIL1.GIF" class="img_icon">
+          DM Me!
+        </a></nav>
+    </div>
+    <div>
+      <span>
+        Loner Catboy - 2025
+      </span>
+    </div>
+    <div class="footer-right">
+      <span> <img src="resources/icons/TURBONET.GIF" class="logo">
+      </span>
+      <span><img src="resources/icons/WINDOWS.GIF" class="logo"></span>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const birthDate = new Date("2000-06-12");
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      const dayDiff = today.getDate() - birthDate.getDate();
+      if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+      }
+
+      document.querySelectorAll('a[href^="http"]').forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+
+      document.getElementById("age").textContent = age;
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
