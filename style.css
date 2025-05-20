@@ -478,7 +478,7 @@ p {
 
 /* MODILE */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .hide-on-mobile {
     display: none !important;
   }
