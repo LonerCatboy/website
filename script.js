@@ -83,12 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const quotes = [
-    { text: "Wanna be my player 2?", weight: 2 },
+    { text: "Wanna be my player 2?", weight: 0.4 },
     { text: "NIS2 Compliant!", weight: 2 },
     { text: "*blushes*", weight: 2 },
     { text: "Creepers gonna creep", weight: 1 },
     { text: "Who is lonely!?", weight: 1 },
-    { text: "Under construction!", weight: 1 },
+    { text: "Under construction!", weight: 2 },
     { text: "Turn off before 12/12/99!", weight: 2 },
     { text: "Meow :3", weight: 1 },
     { text: "Stop refreshing!", weight: 0.5 },
@@ -98,22 +98,31 @@ document.addEventListener("DOMContentLoaded", () => {
     { text: "Nya nya <3!", weight: 0.5 },
     { text: "M-master!", weight: 1 },
     { text: "Cwute!!", weight: 1 },
-    { text: "You'll be the one?", weight: 1 },
+    { text: "Work in progress muh", weight: 1 },
     { text: "Khaaaaaaaaaan!", weight: 1 },
-    { text: "Wonderfully misanthrope!", weight: 0.1 },
+    { text: "Wonderfully misanthrope!", weight: 0.01 },
     { text: "Feeling lucky?", weight: 1 },
     { text: "Developed on company time!", weight: 1 },
-    { text: "Cringetastic!", weight: 2 },
-    { text: "A green flag!", weight: 1 },
-    { text: "Not a red flag!", weight: 1 },
+    { text: "Cringetastic!", weight: 0.2 },
+    { text: "A green flag!", weight: 0.1 },
+    { text: "Not a red flag!", weight: 0.1 },
     { text: "Yaaah!", weight: 1 },
-    { text: "Adopt me!", weight: 1 },
+    { text: "Adopt me!", weight: 0.1 },
     { text: "Since 1859!", weight: 1 },
     { text: "Free Sardinia!", weight: 1 },
     { text: "Not so sad!", weight: 1 },
     { text: "As seen on TV!", weight: 2 },
     { text: "UwU what's this?", weight: 2 },
     { text: "I miss you.", weight: 0.01 }
+  ];
+
+    const header_rdtx = [
+    { text: "Huh, it's nice to have you there!", weight: 2 },
+    { text: "The best website ever (or not)", weight: 2 },
+    { text: "My personal website", weight: 2 },
+    { text: "Welcome here teeheee~~", weight: 1 },
+    { text: "Bruh", weight: 1 },
+    { text: "Meow meow meow meow", weight: 2 }
   ];
 
   function weightedRandom(choices) {
@@ -128,9 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const selected = weightedRandom(quotes);
+  const selected2 = weightedRandom(header_rdtx);
   const quoteBox = document.getElementById("quote-box");
   if (quoteBox && selected) {
     quoteBox.textContent = selected.text;
+  }
+  const headerSubtitle = document.getElementById("subtitle");
+  if (headerSubtitle && selected2) {
+    headerSubtitle.textContent = selected2.text;
   }
 });
 

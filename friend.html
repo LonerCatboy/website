@@ -19,7 +19,7 @@
         <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
         <div class="minecraft-quote" id="quote-box"></div>
       </h1>
-      <h2 class="hide-on-very-small">
+      <h2 class="hide-on-very-small" id="subtitle">
         Uh, it's nice to have you t-there huh!
       </h2>
       <nav>
@@ -64,49 +64,117 @@
   </header>
 
   <main>
+
+    <!-- Music player -->
+
+
+    <div id="winamp-player" class="winamp-player">
+      <div id="title-bar" class="title-bar">🎵 LonerAmp
+        <button class="button--netscape wa-control wa-fixed-topright" onclick="toggleVideoSize()">▼</button>
+      </div>
+
+      <div class="player-wrapper">
+        <div id="overlay" class="wa-hide-on-big"></div>
+        <div id="player" class="player"></div>
+        <p class="video-title wa-hide-on-big"><a id="video-title" href="#" target="_blank">(Titolo)</a></p>
+        <div>
+
+        </div>
+      </div>
+
+      <div id="controls" class="controls">
+        <div>
+          <button class="button--netscape wa-control" onclick="changeVideo(-1)">⏮</button>
+        </div>
+        <div>
+          <button class="button--netscape wa-control" onclick="playVideo()">▶</button>
+        </div>
+        <div>
+          <button class="button--netscape wa-control" onclick="pauseVideo()">⏸</button>
+        </div>
+        <div>
+          <button class="button--netscape wa-control" onclick="stopVideo()">⏹</button>
+        </div>
+
+        <button class="button--netscape wa-control" onclick="changeVideo(1)">⏭</button>
+        <div id="volume-container" class="volume-container">
+          Vol: <input type="range" min="0" max="100" value="50" onchange="setVolume(this.value)">
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+
+
+    <!-- Music player -->
+    <script src="player.js"></script>
+    <!-- YouTube API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+
+
+    <!-- Actual content -->
     <div class="content">
       <h1>
-        Great. Me too. <span class="attention"> Wanna befriend me? </span> This is a great place to start.
+        Looking for friends? Great (me too). This is a great place to start. Don't dare to go away!
       </h1>
       <p class="sub-content-small narrow-700">
-        Believe me, I'm more scared of you than you're scared of me. So, read carefully the following instructions
-        but please don't be shy or anything. <br>
-        As you may have guessed at this point I do not excel in forming connections. In fact I'm
-        rather clueless. <br>
+        Sooo first of all, pls note that I'll be more scared of you than you're scared of me. <br>
+        As you may have guessed at this point I do not excel in forming connections with people. In fact I'm
+        rather clueless. <br> But bruh - they say - humans needs social interactions to work and yadda yadda yadda...
+        yeah sure, you'll have read this hungreds of times didn't ya? <br>
         <br>
-        Now, many of you (I assume you come from reddir) will certainly be familiar with the following meme format,
+        Now, many of you (I assume you come from reddit) will certainly be familiar with the following meme format,
         representing the condition afflicting many of us: <br><br>
 
         <img src="resources/graphs/introvertmeme.png" class="narrow-700 img-decor clickable-image"
           onclick="makeEffect('hit')"> <br><br>
 
-        As can clearly be seen in this graphical representation of loneliness, I happened to fall into that
-        category of introvert/asocial/weirdos which mostly failed to find someone to be friend with (actually that's not
-        completely true but I'll elaborate later). <br>
+        This is a meme which was in one form or another published on the r/introvert subreddit quite a lot. <br> <br>
+
+        As can clearly be seen in this graphical representation of loneliness, which to be completely fair I
+        originally
+        imagined it to be way funnier than this, I happened to fall into that
+        category of introvert/asocial/weirdos which mostly failed to find someone to be friend with (actually that's
+        not
+        completely true but I'll elaborate later or after we meet if relevant). <br>
+        <br>
         It happens! <br>
-        It happens to a lot of people and perhaps it might have even happened to <span
-          class="class glow-blink">you!</span> <br>
-        <b><i>And there is nothing wrong with that.</i></b> <br>
         <br>
-        Now, listen, as an engineer, I like to think of me like a <span class="attention">solution oriented
+        And pherhaps... this also apply to <span class="class glow-blink">you!</span> <br> <br> Otherwise why are you
+        here!? Go spend time with your actual friends you slutty not-friendless whore! <br>
+        <br>
+        So, as an engineer, I like to think of me like a <span class="attention">solution oriented
           individual</span>. <br>
-        And look, you can call me naive, you can call me silly, maybe even cringe — people do it all the time, believe
-        me
-        — but if you're lonely too? Then guess what? The solution is right there, it's so obvious, like honestly it's
-        <i>tremendous</i>!
-        <br>
-        Do I really need to state it? Ok then. <br>
-        We just befriend each other. Simple. Fast. Easy. <span class="attention">Huge win</span>! <br>
+
 
         <br>
-        Now, <br>
-        Here's like it's gonna work. If you feel like, read around, and then just DM me.
+        Therefore, here's like it's gonna work. If you feel like, read around, and then just DM me.
         Like you'd do with a normal person which I definitely am.
+        <br> <br>
+        What I offer is some kind of relationship which may or may not evolve into a friendship at some point. No
+        terms
+        and conditions.
       </p>
 
-      <div style="margin: 1.1rem
-;">
+      <div style="margin: 1.1rem;">
         <div>
+
+          <button class="toggle--netscape big-text" type="button" aria-expanded="false">
+            Terms and conditions
+          </button>
+          <div class="toggle-content" hidden style="max-width: 680px;">
+            <p class=" sub-content-small narrow-700">
+              I'll be your friend. <br> <br>
+              If you scare the shit out of me I'm out. <br> <br>
+              <br> <br>
+            </p>
+          </div>
+        </div>
+
+        <div>
+
           <button class="toggle--netscape big-text" type="button" aria-expanded="false">
             What's a friendship for me
           </button>
@@ -116,9 +184,11 @@
             </h1>
 
             <p class=" sub-content-small narrow-700">
-              What's a friend? It could be or imply many things actually. I'm quite open minded in that regard but you'd
+              What's a friend? It could be or imply many things actually. I'm quite open minded in that regard but
+              you'd
               decide. What's
-              important now though it's not what a friendship could eventually be but rather what a friendship tipically
+              important now though it's not what a friendship could eventually be but rather what a friendship
+              tipically
               is <i> at the beginning.</i> <br>
               <br>
               And that's very straightforward. I'm looking for a person with whom <span>
@@ -162,7 +232,8 @@
 
               I'm interested in old consumer and media technology, especially from the 70s and 80s and 90s. <br>
               I'm also interested in old HiFi systems (don't worry though I'm not an audiophile). <br> <br>
-              And also scifi, animation, data hoarding, history (I like listening to podcast), architecture (perhaps my
+              And also scifi, animation, data hoarding, history (I like listening to podcast), architecture (perhaps
+              my
               next major but I'm not sure), and many more things I don't remember now. <br>
               I enjoy fantasy anime and isekais from time to time. <br>
               Pretty much everything but fitness and pseudosciences. <br>
@@ -182,8 +253,8 @@
             <p class="sub-content-small narrow-700">
               ✅<span><b>One of more of the following: <br><br>Online: </b></span> <br> <br>
               <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-              <img src="resources/decorations/dialup.gif" class="img-decor">
-            </a>
+                <img src="resources/decorations/dialup.gif" class="img-decor">
+              </a>
               - Playing games (please refer to the list below) <br>
               - Chatting (initially via text only, sorry I'm shy)<br>
               - Roleplaying (I'd be a beginner, wether we'd do that in italian or in english) <br>
@@ -198,7 +269,8 @@
               - Hiking in nature (south Sardinia) <br>
               - Playing game in split screen (Mario Kart and stuff like that) <br>
               - Visiting museums, or cities, or villages, or places <br>
-              - Visiting shops. Any shop it'd be ok. If I had to pick I'd say thrift stores, and maybe manga shops <br>
+              - Visiting shops. Any shop it'd be ok. If I had to pick I'd say thrift stores, and maybe manga shops
+              <br>
               - Any other activity which is proposed unless it fall under... <br> <br> <br>
 
               ❌<span><b>Stuff I'd prefer to avoid instead: <br><br>Online: </b></span> <br> <br>
@@ -246,7 +318,8 @@
 
               - Survival games (Raft) also into those. Especially if building is involved. <br> <br>
 
-              - FPS and similar I haven't played them for a while and I was never good, but I think I own Battlefield V
+              - FPS and similar I haven't played them for a while and I was never good, but I think I own Battlefield
+              V
               and
               some others. Haven't opened them in years. I used to like TF2. <br> <br>
 
@@ -317,7 +390,8 @@
               <br><br>
               <h4> <i>Why no Discord link? </i></h4>
               <p class="sub-content-small">
-                This website is public. I'm not leaving my contacts in the wild like that. I'll give it to you after we
+                This website is public. I'm not leaving my contacts in the wild like that. I'll give it to you after
+                we
                 chatted a bit. Pls no throwaway account.
               </p>
               <br><br>
@@ -344,12 +418,14 @@
           </div>
 
         </div>
-        
+
         <div class="tab-content" id="tab2" style="display:none;">
           <h1 style="text-align: center;">
             W-W-what!?
           </h1>
-          <iframe src="https://giphy.com/embed/gvXJRdFVkF8iAOz6l0" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-bsd-bungo-stray-dogs-gvXJRdFVkF8iAOz6l0"></a></p>
+          <iframe src="https://giphy.com/embed/gvXJRdFVkF8iAOz6l0" width="100%" height="100%" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+          <p><a href="https://giphy.com/gifs/cat-bsd-bungo-stray-dogs-gvXJRdFVkF8iAOz6l0"></a></p>
           <h3 style="text-align: center;">
             Huh!?
           </h3>
@@ -359,7 +435,8 @@
             *blushes* <br> <br>
             I-I mean You're kind of bold, aren't you? It's... sweet. Really. <br> <br>
             *I look up, meeting your gaze* <br> <br>
-            T-though I really think it'd be better to start as friends <span>(please click on the correct button)</span>. I-If you feel l-like!!!
+            T-though I really think it'd be better to start as friends <span>(please click on the correct
+              button)</span>. I-If you feel l-like!!!
           </p>
 
 
@@ -369,10 +446,10 @@
             WRONG ANSWER!!!!!
           </h1>
           <div style="text-align: center;">
-          <img src="resources/decorations/what.gif" class="img-decor">
-        </div>
+            <img src="resources/decorations/what.gif" class="img-decor">
+          </div>
           <h1>
-            Uhm. No thanks. 
+            Uhm. No thanks.
           </h1>
           <p>
             I mean, if you're a man that's not even entirely possible in Italy. <br>
@@ -382,7 +459,7 @@
         <div class="tab-content" id="tab4" style="display:none;">
           <h1 style="text-align: center; padding: 0; margin: 0;">
             There are no wrong answers!
-          </em>
+            </em>
           </h1>
         </div>
 
