@@ -4,7 +4,6 @@ const videoIds = [
     { id: "AMcVJmb5mvk", title: "90s Japanese Lofi Hiphop" },
     { id: "hp-LPRbozoU", title: "Time" },
     { id: "oNXzMBA9VU4", title: "Windows XP Set Up" },
-    { id: "6bGivPNjbrw", title: "Yuri!!! on Ice Opening" },
 
 ];
 
@@ -32,6 +31,7 @@ function onYouTubeIframeAPIReady() {
         height: "30",
         width: "30",
         videoId: videoIds[currentVideo].id,
+        host: 'https://www.youtube-nocookie.com',
         playerVars: {
             controls: 0,
             modestbranding: 1,
@@ -170,8 +170,8 @@ function startUpdatingSeek() {
             if (!isNaN(duration) && duration > 0) {
                 const percent = (currentTime / duration) * 100;
                 seekSlider.value = percent;
-                // Save the current time to a cookie every 5 seconds
-                if (Math.floor(currentTime) % 5 === 0) {
+                // Save the current time to a cookie every 2 seconds
+                if (Math.floor(currentTime) % 2 === 0) {
                     saveSeekToCookie(videoIds[currentVideo].id, currentTime);
                 }
             }
