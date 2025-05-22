@@ -83,10 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const quotes = [
-    { text: "Wanna be my player 2?", weight: 0.4 },
+    { text: "Wanna be my player 2?", weight: 0.1 },
     { text: "NIS2 Compliant!", weight: 2 },
     { text: "*blushes*", weight: 2 },
-    { text: "Creepers gonna creep", weight: 1 },
     { text: "Who is lonely!?", weight: 1 },
     { text: "Under construction!", weight: 2 },
     { text: "Turn off before 12/12/99!", weight: 2 },
@@ -95,25 +94,30 @@ document.addEventListener("DOMContentLoaded", () => {
     { text: "So gonna marry me?", weight: 0.1 },
     { text: "Not a loser's page!", weight: 1 },
     { text: "Stay a while, stay forever!", weight: 1 },
-    { text: "Nya nya <3!", weight: 0.5 },
+    { text: "Nya nya <3!", weight: 0.05 },
     { text: "M-master!", weight: 1 },
     { text: "Cwute!!", weight: 1 },
-    { text: "Work in progress muh", weight: 1 },
-    { text: "Khaaaaaaaaaan!", weight: 1 },
-    { text: "Wonderfully misanthrope!", weight: 0.01 },
+    { text: "Work in progress!", weight: 1 },
+    { text: "The cutest webpage!", weight: 1 },
     { text: "Feeling lucky?", weight: 1 },
     { text: "Developed on company time!", weight: 1 },
     { text: "Cringetastic!", weight: 0.2 },
-    { text: "A green flag!", weight: 0.1 },
+    { text: "A green flag!", weight: 0.05 },
     { text: "Not a red flag!", weight: 0.1 },
     { text: "Yaaah!", weight: 1 },
-    { text: "Adopt me!", weight: 0.1 },
+    { text: "Adopt me!", weight: 0.01 },
     { text: "Since 1859!", weight: 1 },
     { text: "Free Sardinia!", weight: 1 },
-    { text: "Not so sad!", weight: 1 },
+    { text: "Not so sad huh!", weight: 1 },
     { text: "As seen on TV!", weight: 2 },
     { text: "UwU what's this?", weight: 2 },
-    { text: "I miss you.", weight: 0.01 }
+    { text: "Welcome to heaven!", weight: 1 },
+    { text: "Welcome to hell!", weight: 0.1 },
+    { text: "Yay, HTML!", weight: 1 },
+    { text: "We're on the internet!", weight: 2 },
+    { text: "Hey, what are you exactly looking for here?", weight: 0 },
+    { text: "Sort of works on mobile too!", weight: 2 },
+    { text: "In color!", weight: 1 }
   ];
 
     const header_rdtx = [
@@ -122,7 +126,20 @@ document.addEventListener("DOMContentLoaded", () => {
     { text: "My personal website", weight: 2 },
     { text: "Welcome here teeheee~~", weight: 1 },
     { text: "Bruh", weight: 1 },
-    { text: "Meow meow meow meow", weight: 2 }
+    { text: "Meow meow meow meow", weight: 2 },
+    { text: "Broooo what're ya doing here!?", weight: 0.5 },
+    { text: "Have a look around", weight: 1 },
+    { text: "Random_Subtitle.txt", weight: 1 },
+    { text: "Flashy, isn't it?", weight: 2 },
+    { text: "Look at you! You look hella fine!", weight: 1 },
+    { text: "What a nice visitor we have here!", weight: 1 },
+    { text: "Thanks for visiting", weight: 1 },
+    { text: "Tsk! Who are you and why are you here!?", weight: 0.5 },
+    { text: "www.loner.it", weight: 1 },
+    { text: "Whatever you're thinking, yeah, it isn't false", weight: 1 },
+    { text: "You're kinda having fun refreshing the page aren't ya?", weight: 0.3 },
+    { text: "Wow you are indeed really going deeper here, but that's kinda it, like, you can know me, like irl", weight: 0 },
+    { text: "The coolest website ever (or not?)", weight: 0.1 },
   ];
 
   function weightedRandom(choices) {
