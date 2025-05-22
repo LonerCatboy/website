@@ -1,10 +1,11 @@
 
 const videoIds = [
     { id: "8kBlKM71pjc", title: "Cozy Animal Crossing music" },
+    { id: "qKEL3E05-nw", title: "City Pop Playlist" },
     { id: "AMcVJmb5mvk", title: "90s Japanese Lofi Hiphop" },
+    { id: "-EsLS2v886w", title: "Japanese RnB"},
     { id: "hp-LPRbozoU", title: "Time" },
     { id: "oNXzMBA9VU4", title: "Windows XP Set Up" },
-
 ];
 
 let currentVideo = 0;
