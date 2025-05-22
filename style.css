@@ -676,7 +676,7 @@ p {
   padding: 0px 4px;
 }
 
-#overlay {
+.overlay {
   position: absolute;
   top: 28px;
   left: 4px;
@@ -684,7 +684,6 @@ p {
   height: 32px;
   background-color: var(--color-text);
   z-index: 10;
-  pointer-events: none; 
 }
 
 .player {
@@ -778,8 +777,15 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .volume-container {
-  padding: 4px 6px;
-  border-radius: 0px;
+  padding: 4px;
+}
+
+.seek-container {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  width: 95%;
 }
 
 input[type=range] {
