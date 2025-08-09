@@ -165,3 +165,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButtons = document.querySelectorAll('.toggle--netscape');
+
+      toggleButtons.forEach(button => {
+        const content = button.nextElementSibling;
+
+        button.addEventListener('click', function () {
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!isExpanded));
+          content.hidden = isExpanded;
+          makeSound('click');
+        });
+      });
+    });
+

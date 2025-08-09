@@ -12,6 +12,7 @@
   <header>
     <img src="resources/decorations/nyan-cat.gif" alt="Nyan Cat" class="nyan-cat hide-on-mobile"
       onclick="makeSound('explosion')">
+      <!-- IDK why I made this -->
     <div>
       <h1 style="padding: 0; margin: 0;">
         <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
@@ -30,20 +31,7 @@
             </button>
           </a>
         </div>
-        <div>
-          <a href="story.html">
-            <button class="button--netscape">
-              Original content
-            </button>
-          </a>
-        </div>
-        <div>
-          <a href="diary.html">
-            <button class="button--netscape">
-              Blog
-            </button>
-          </a>
-        </div>
+
 
         <div>
           <a href="friend.html">
@@ -125,39 +113,27 @@
     <!-- Actual content -->
     <div class="content">
       <h1>
-        So, looking for friends?
+        So, are you lonely? Perhaps looking for a friend?
+      </h1>
+      <h1 style=" text-align: right;">
+        ... or maybe for more? <br>
+        <span style="font-size: 15px;">Terms and conditions applies</span>
       </h1>
       <section class="sub-content-small narrow-700">
         <p>
-          Well, if you clicked on that button (or link, or whatever, yo're visiting MY website) that's probably the
-          case. Well guess what, I guess it's sort of your lucky day because it happens I am looking for friends myself.
-        </p>
-        <p>
-          Do you happen to fall - just like me - in the orange section of the following graph?
+          Perhaps - and I'm only assuming - you, my dear internaut fellow, fell just like me within the orange portion on the following graph: 
         </p>
 
         <img src="resources/graphs/introvertmeme.png" class="narrow-700 img-decor clickable-image"
-          onclick="makeEffect('hit')"> <br><br>
-        <p>
-          This is a meme which, in one form or another, is often published on the r/introvert subreddit quite a lot.
+          onclick="makeEffect('hit')">
+        <p style="font-size: small; margin-top: -20px;">
+          Source: I made it up
         </p>
         <p>
-          Well, here i offer/present <span class="attention">the obvious solution</span>. Here it is:
+          Well should that be the case, you - my dear - might just have just stumbled in the solution.
         </p>
         <p>
-          1 - You have a look around here to decide wether I sound decently interesting to you <br>
-          2 - You make contact with me (you do that by clicking the "I want to befriend you" button at the end of the
-          page) <br>
-          3 - We see where this goes <br>
-        </p>
-        <p>
-          That's it. So easy. Totally free. No terms and conditions. Like it might be a life changer for both of us.
-          Like I'm totally dead serious I spent an embarassing amount of time preparing this whole thing.
-        </p>
-        <p>
-          If you're getting bored, there's a player with some music to listen to while reading here. Unless you're on mobile. It
-          doesn't appear on mobile. Sorry. Use a proper computing device next time pls. Music is sourced from YouTube. On pc, you can drag that thing around. 
-          Or just skip to the end of the page, or whatever.
+          Well actually 
         </p>
       </section>
 
@@ -565,7 +541,7 @@
     <div class="footer-left">
       <nav> <a href="https://www.reddit.com/user/MiserableLonerCatboy/">
           <img src="resources/icons/EMAIL1.GIF" class="img_icon">
-          DM Me!
+          Reach me out
         </a></nav>
     </div>
     <div>
@@ -580,20 +556,7 @@
     </div>
   </footer>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleButtons = document.querySelectorAll('.toggle--netscape');
 
-      toggleButtons.forEach(button => {
-        const content = button.nextElementSibling;
-
-        button.addEventListener('click', function () {
-          const isExpanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', String(!isExpanded));
-          content.hidden = isExpanded;
-          makeSound('click');
-        });
-      });
-    });
   </script>
   <script src="script.js"></script>
 </body>

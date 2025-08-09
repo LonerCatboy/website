@@ -1,0 +1,211 @@
+## NOTE
+
+What are you looking for here? If you wanna investigate me you might want to just write me.
+
+## BUTTONS IN HEADER
+
+<div>
+          <a href="story.html">
+            <button class="button--netscape">
+              Original content
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="diary.html">
+            <button class="button--netscape">
+              Blog
+            </button>
+          </a>
+        </div>
+
+## OLD INDEX, too didascalic
+
+    <div class="content">
+      <h1>Hi there!</h1>
+      <p>
+
+      </p>
+      <h2>
+        About me...
+      </h2>
+      <p>Assuming I am alive, I am now a <span id="age">[please enable javascript]</span> years old boy/man.</p>
+
+      <p>
+        I live and work full time in Sardinia, Italy. <br>
+      </p>
+      <p>
+       
+      </p>
+      <p>
+     <br>
+      </p>
+      <div class="sub-content">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2473069.345963819!2d10.190639946918393!3d40.301417958165985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1746096547442!5m2!1sit!2sit"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>
+          <em>I live here. I put it on a map because there may be people in the world which don't know where Sardinia
+            is.</em>
+        </p>
+      </div>
+      <p>
+        Oh, I also have a small collection of manga, even though I haven't bought new ones for a while (I'm broke rip).
+        I also enjoy anime, even though I haven't watched a lot lately. I loved Frieren and Yuri on ice (bruh I'm not
+        gonna update this page very much thus probably I've watched other ones already huh!) <br>
+        <br>
+      </p>
+      <p>
+        As for music I like JPop and listen to it quite a lot. <br>
+        Though I kinda like pop in general, particularly from the 70 to 90. <br>
+        Here a list of JPop / JRock artists I like (huh, again I'm not gonna update this very often or at all)
+        <br>
+      </p>
+      <div class="sub-content-small">
+        <h2>My favourite artists:</h2>
+        <p class="sub-content-small">
+          <b>JPop / JRock:</b> <br><br>
+          <a href="https://www.youtube.com/watch?v=H_2jH6XVYU0&pp=ygUbYW5hcmNoeSBvZmZpY2lhbOmrreeUt2Rpc20g"
+            rel="external">Official Hige Dandism </a><br>
+          YOASOBI <br>
+          Vaundy <br>
+          Ryokuoushoku Shakai <br>
+          Nanase Aikawa <br>
+          Radwimps <br>
+          Imase <br>
+          THE ORAL CIGARETTES <br>
+          <a href="https://www.youtube.com/watch?v=0xSiBpUdW4E" rel="external">Aymion</a> <br>
+          <b></b>
+          <br>
+
+        </p>
+      </div>
+
+      <div class="sub-content-small">
+        <h2 class="glow-blink">Youtuber I recommend!:</h2>
+        <p class="sub-content-small narrow-700">
+          1 - <a href="https://www.youtube.com/@CathodeRayDude" rel="external" class="glow-blink">Cathode Ray Dude</a>
+          //
+          <a href="https://www.youtube.com/watch?v=7mqkTFq7Ekg&t=1s" rel="external">His best video</a> <br>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7mqkTFq7Ekg?si=9p1BRheeVYTYg308"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
+          Now this dude is like the goat, he talks about the most boring stuff ever like telephones, modedms, vintage
+          computers and so on, but it does that
+          with such a good storytelling you'll end up listening for hours to the most random anedotes about the history
+          of technology. <br>
+          Which is like, the best kind of history. <br>
+        </p>
+        <p></p>
+        <p class="sub-content-small narrow-700">
+          2 - <a href="https://www.youtube.com/@Techmoan" rel="external" class="glow-blink">Techmoan</a> //
+          <a href="https://www.youtube.com/watch?v=3MQCkny4GJc" rel="external">Favorite video</a><br>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3MQCkny4GJc?si=ECf_a2u_cTcx_9ml"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
+          Not much to say about it, you probably already know him. He reviews cool old stuff, though he's mostly
+          focused on audio equipment and vintage hifi. He's chill, his videos are relaxing with a touch of sillyness
+          from time
+          to time. Just lovely as a person.
+        </p>
+
+        <p></p>
+        <p class="sub-content-small narrow-700">
+          3 - <a href="www.youtube.com/@HyperCubist" rel="external" class="glow-blink">HyperCubist</a> //
+          <a href="https://www.youtube.com/watch?v=SwGbHsBAcZ0" rel="external">Visualizind 4D</a><br>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SwGbHsBAcZ0?si=HS_ddGUXuaFF8UJZ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+          I don't remeber how I found this serie, made by the youtuber HyperCubist, but I've found it quite intriguing
+          especially the later episodes. This serie aim to the goal of helping the viewer visualizing 4dimensional
+          space and geometry and it does that really well. <br>
+          There isn't much math involved either. Though it requires at least a bit of focus. Especially the later
+          episodes.
+        </p>
+
+        <p></p>
+        <p class="sub-content-small narrow-700">
+          4 - <a href="https://www.youtube.com/@zunda-theorem-en" rel="external" class="glow-blink">Zundamon's
+            Theorem</a>
+          //
+          <a href="https://www.youtube.com/watch?v=-iF9h9fePYk" rel="external">Tropical geometry</a><br>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-iF9h9fePYk?si=_U9-Zcixo5vDV8xs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+          THE CUTEST CHANNEL OF ALL!! <br>
+          This is a new discovery, so I really don't have much to say. This one I link is the only video I've viewed.
+          It's
+          another math channel (I'm not that much into pop math but somehow yt keeps recommending it to me). <br>
+          The catch here is that the problem are explained by two super cute anime characters, and they have like a
+          supeeeeerr cute voice, like it's so lovely. It's obviously fake yet so cute.
+          The math is (as it happens with most pop-math content) quite basic and easy to follow.
+
+        </p>
+        <p class="sub-content-small narrow-700">
+          Actually these aren't even all, there are a lot of youtubers I follow but some of them are so ubiquitous I
+          don't think it'd be interesting to list them. Like, I won't list TechnologyConnections or Kurzgesagt.
+        </p>
+      </div>
+
+      <p></p>
+      <h1>
+        F.A.Q.
+      </h1>
+      <h2>
+        Why is your reddit username "MiserableLonerCatboy"? That sound weird and bad.
+      </h2>
+      <p class="sub-content-small narrow-700">
+        Well two main reasons actually: <br>
+        First, I was in a slightly bad mood the day I created that account, more than one year ago. <br>
+        Second, most importantly, it was supposed to be like a burner account for NSFW but I never used it like that.
+        <br>
+        I liked the Catboy part though. Not that I wear cat ears in public (I wish I had that confidence!!!!!) <br>
+        So, despite the fact I am not a Catboy irl, I feel comfortable interacting online under a pseudonym which refer
+        to
+        that. <br>
+        Is that a crime? <br>
+        I wish I could change it but that's not possible and I'm not gonna create another account. <br>
+      </p>
+      <p></p>
+      <h2>
+        So you're like a nerd, ya look like a discord moderator or smth?
+      </h2>
+      <p class="sub-content-small narrow-700">
+        I said I don't look like a catboy in the sense that perhaps I'm not that cute, but no, I do not look like a
+        meme (at least I hope so huh!).
+        IRL, I look like a rather typical guy. No posture issues, skinny, clean. Plain normal, 100% not weirdo.
+        A lil bit on the smaller size. Someone might consider that cute. <br>
+        Said someone should definitely check out the page "looking for a friend?" in the header. <br>
+      </p>
+      <p></p>
+      <h2>
+        So what's this whole thing about? A page about you? Are you a narcissist or smth?
+      </h2>
+      <p class="sub-content-small narrow-700">
+        This page is a mean of <span class="attention"> self expression. </span> You probably use one yourself, on a
+        platform like instagram or whatever. You do you, but a page about me must have the layout and UX I decide. <br>
+        People used to to that all the time, I guess, before socials. I don't like social very much. I don't
+        particularly enjoy reddit either but it's the only way to interact with others. <br>
+        Call this a safe space or something. <br> <br>
+        You are allowed to clone this website and make your own modyfiying mine if ya want. Like we could create a <er>
+          webring </er> if ya want. That would be fun. So like the site is super open source. Kinda like me.<br> <br>
+        Oh yeah and maybe there'll be a blog (I'll mostly publish guides on how to pirate stuff teheheheeh!!!!) and
+        maybe something else, work is in progress.
+      </p>
+
+      <p></p>
+      <h2>
+        Ok so this is just a personal blog and you're a perfecly normal person. But what about cookies?
+      </h2>
+      <p class="sub-content-small narrow-700">
+        Cookies are used here and there to save stuff. Like, if you click on "change theme" in the header, that saves a small tiny tiny cookie to remember it. If you use the audio player in some pages it generates a bit of cookies to store stuff like what you were listening, and stuff. <br>
+        There shouldn't be third parties cookies but if you find some pls DM me, I'm not a developer actually.
+      </p>
+
+    </div>
+    </div>
