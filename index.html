@@ -142,6 +142,7 @@
           }
         ];
 
+        // LADIES AND GENTLEMEN, HERE IT STARTS, IT'S ~~VIBE CODING~~, GO DEEPSEEK GO
         // Fetch and display anime info
         async function fetchAndDisplayAnime() {
           const container = document.getElementById('anime-container');
@@ -172,7 +173,7 @@
               errorElement.innerHTML = `
           <div class="anime-info">
             <h3>${animeEntry.title}</h3>
-            <p class="user-rating">${animeEntry.myRating ? '👍 I liked it!' : '👎 I didn\'t like it'}</p>
+            <p class="user-rating">${animeEntry.myRating ? 'I liked it' : 'I didn\'t like it'}</p>
             <p class="user-thoughts">${animeEntry.myThoughts}</p>
             <p>Could not load additional details</p>
           </div>
@@ -222,7 +223,7 @@
         <p class="user-thoughts"><strong>My own thoughts:</strong> ${anime.myThoughts}</p>
         <p><strong>Episodes:</strong> ${anime.episodes}</p>
         <p><strong>Status:</strong> ${anime.status}</p>
-        <p><strong>Description:</strong> ${anime.description.substring(0, 500)}...</p>
+        <p><strong>Description:</strong> ${anime.description.substring(0, 500)}... for more info click on the cover</p>
       </div>
     `;
 
