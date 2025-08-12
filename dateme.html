@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huh? *blushes* </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="resources/decorations/nyan-cat.gif" alt="Nyan Cat" class="nyan-cat hide-on-mobile"
+            onclick="makeSound('explosion')">
+        <!-- IDK why I made this -->
+        <div>
+            <h1 style="padding: 0; margin: 0;">
+                <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+                Welcome to Loner Catboy's World Wide Web Page!
+                <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+                <div class="minecraft-quote" id="quote-box"></div>
+            </h1>
+            <h2 class="hide-on-very-small" id="subtitle">
+                Uh, it's nice to have you t-there huh!
+            </h2>
+            <nav>
+                <div>
+                    <a href="index.html">
+                        <button class="button--netscape">
+                            Home
+                        </button>
+                    </a>
+                </div>
+
+                <div>
+                    <button class="button--netscape" onclick="toggleTheme()">Change theme</em>
+                    </button>
+                </div>
+
+            </nav>
+        </div>
+        <div></div>
+    </header>
+
+    <main>
+
+        <!-- Music player -->
+
+
+        <div id="winamp-player" class="winamp-player hide-on-mobile">
+            <div id="title-bar" class="title-bar">🎵 LonerAmp
+                <button class="button--netscape wa-control wa-fixed-topright" onclick="toggleVideoSize()">▼</button>
+            </div>
+
+            <div class="player-wrapper">
+                <div id="overlay" class="overlay wa-hide-on-big"></div>
+                <div id="player" class="player"></div>
+                <div>
+                    <p class="video-title wa-hide-on-big"><a id="video-title" href="#" target="_blank">Loading...</a>
+                    </p>
+                    <span class="wa-hide-on-big" style="margin-top: -20px;">Music is provided by the respective users on
+                        youtube</span>
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+            <div id="seek-container" class="seek-container">
+                <input type="range" id="seek-slider" min="0" max="100" value="0" step="1">
+            </div>
+
+            <div id="controls" class="controls">
+                <div>
+                    <button class="button--netscape wa-control" onclick="changeVideo(-1)">⏮</button>
+                </div>
+                <div>
+                    <button class="button--netscape wa-control" onclick="playVideo()">▶</button>
+                </div>
+                <div>
+                    <button class="button--netscape wa-control" onclick="pauseVideo()">⏸</button>
+                </div>
+                <div>
+                    <button class="button--netscape wa-control" onclick="stopVideo()">⏹</button>
+                </div>
+
+                <button class="button--netscape wa-control" onclick="changeVideo(1)">⏭</button>
+                <div id="volume-container" class="volume-container">
+                    Vol: <input type="range" min="0" max="100" value="50" onchange="setVolume(this.value)">
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+
+        <!-- Music player -->
+        <script src="player.js"></script>
+        <!-- YouTube API -->
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <!-- Tehehe~ API means BEEES in italian, so silly -->
+
+
+        <!-- Actual content -->
+
+        <div class="content">
+            <h1 style="text-align: center;">
+                ~ * ~ So, you want to date a redditor... ~ * ~
+            </h1>
+
+            <h1>This page is under construction, come back in like... a month, or contact me right away to not lose your chance. You've already missed on friendship.</h1>
+            <section class="sub-content-small">
+
+            </section>
+
+            <div style="margin: 1.1rem;">
+                <div>
+
+                    <button class="toggle--netscape big-text" type="button" aria-expanded="false">
+                        Bruh
+                    </button>
+                    <div class="toggle-content" hidden style="max-width: 680px;">
+                        <section class=" sub-content-small narrow-700">
+
+                        </section>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+           
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <nav> <a href="https://www.reddit.com/user/MiserableLonerCatboy/">
+                    <img src="resources/icons/EMAIL1.GIF" class="img_icon">
+                    Reach me out
+                </a></nav>
+        </div>
+        <div>
+            <span>
+                Loner Catboy - 2025
+            </span>
+        </div>
+        <div class="footer-right">
+            <span> <img src="resources/icons/TURBONET.GIF" class="logo">
+            </span>
+            <span><img src="resources/icons/WINDOWS.GIF" class="logo"></span>
+        </div>
+    </footer>
+    <script>
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
