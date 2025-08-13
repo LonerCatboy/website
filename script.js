@@ -29,9 +29,9 @@ function makeEffect(name) {
 function toggleTheme() {
   makeSound('click');
 
-  const themes = ['mint', 'desert', 'feminine']; 
+  const themes = ['mint', 'desert', 'feminine'];
   const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-  
+
   const currentIndex = themes.indexOf(currentTheme);
 
   const nextIndex = (currentIndex + 1) % themes.length;
@@ -57,24 +57,36 @@ function showThemeToast(themeName) {
   });
 }
 
-window.onload = () => openTab('tab4');
+//window.onload = () => openTab('tab4');
 
 (function () {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
   }
-  else{
+  else {
     document.documentElement.setAttribute('data-theme', 'mint');
   }
 })();
 
-function openTab(tabId) {
-  makeSound('click');
+function openTab(tabId, event) {
   const tabs = document.querySelectorAll('.tab-content');
   tabs.forEach(tab => tab.style.display = 'none');
 
   document.getElementById(tabId).style.display = 'block';
+
+  // Reset scale and opacity for all tab buttons
+  const tabButtons = document.querySelectorAll('.tab-buttons button');
+  tabButtons.forEach(btn => {
+    btn.style.transform = 'scale(1)';
+    btn.style.opacity = '1';
+  });
+
+  // Scale up and fully show the clicked button
+  if (event && event.currentTarget) {
+    event.currentTarget.style.transform = 'scale(1)';
+    event.currentTarget.style.opacity = '0.6';
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -120,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { text: "In color!", weight: 1 }
   ];
 
-    const header_rdtx = [
+  const header_rdtx = [
     { text: "Huh, it's nice to have you there!", weight: 2 },
     { text: "The best website ever (or not?)", weight: 2 },
     { text: "My personal website", weight: 2 },
@@ -165,18 +177,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleButtons = document.querySelectorAll('.toggle--netscape');
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButtons = document.querySelectorAll('.toggle--netscape');
 
-      toggleButtons.forEach(button => {
-        const content = button.nextElementSibling;
+  toggleButtons.forEach(button => {
+    const content = button.nextElementSibling;
 
-        button.addEventListener('click', function () {
-          const isExpanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', String(!isExpanded));
-          content.hidden = isExpanded;
-          makeSound('click');
-        });
-      });
+    button.addEventListener('click', function () {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isExpanded));
+      content.hidden = isExpanded;
+      makeSound('click');
     });
+  });
+});
 

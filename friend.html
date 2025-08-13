@@ -18,7 +18,7 @@
         <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
         Welcome to Loner Catboy's World Wide Web Page!
         <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
-        <div class="minecraft-quote" id="quote-box"></div>
+        <div class="minecraft-quote hide-on-mobile" id="quote-box"></div>
       </h1>
       <h2 class="hide-on-very-small" id="subtitle">
         Uh, it's nice to have you t-there huh!
@@ -56,7 +56,7 @@
     <!-- Music player -->
 
 
-    <div id="winamp-player" class="winamp-player hide-on-mobile">
+    <div id="winamp-player" class="winamp-player hide-on-mobile" style="visibility: hidden;">
       <div id="title-bar" class="title-bar">🎵 LonerAmp
         <button class="button--netscape wa-control wa-fixed-topright" onclick="toggleVideoSize()">▼</button>
       </div>
@@ -99,7 +99,6 @@
       </div>
 
     </div>
-    </div>
 
 
 
@@ -112,8 +111,8 @@
 
     <!-- Actual content -->
     <div class="announcement-decor">
-      <h1 style="text-align: center;">
-        APPLICATIONS CLOSED
+      <h1 style="text-align: center;" class="hard-blink">
+        FRIENDSHIP APPLICATIONS CLOSED
       </h1>
       <p>You missed your chance! Bruh!</p>
       <p>
@@ -122,17 +121,21 @@
       <h1>
         <b>But you can still date me</b>
       </h1>
-      <p style="text-align: center;">
-        ~ * ~ All genders allowed ~ * ~
+      <p style="text-align: center;"><b>
+          ~ * ~ All genders allowed ~ * ~</b>
       </p>
-      <p>
-        <a href="dateme.html">[ Learn more ]</a>
-      </p>
+      <div></div>
+        <a href="dateme.html">
+          <button class="button--netscape" style="font-size: 16px;">
+            Learn more
+          </button>
+        </a>
+      </div>
     </div>
-    
-    
-    <div class="content" style="opacity: 0.3;">
-      
+
+
+    <div class="content disabled">
+
       <h1>
         So, you are lonely? Perhaps looking for a friend?
       </h1>
