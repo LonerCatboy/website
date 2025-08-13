@@ -105,10 +105,6 @@
         <!-- Actual content -->
 
         <div class="content">
-            <h1 style="text-align: center;">
-                ~ * ~ So, you want to date a redditor... ~ * ~
-            </h1>
-
             <h1>This page is under construction, come back in like... a month, or contact me right away to not lose your
                 chance. You've already missed on friendship.</h1>
             <section class="sub-content-small">
@@ -119,11 +115,29 @@
                 <div>
 
                     <button class="toggle--netscape big-text" type="button" aria-expanded="false">
-                        Bruh
+                        Hard requirements
                     </button>
                     <div class="toggle-content" hidden style="max-width: 680px;">
                         <section class=" sub-content-small narrow-700">
-
+                            <p>
+                                <b>Location - </b>I know I might lose like 95% of my target audience but I'm not
+                                interested in Internet-Only romantic relationships. Therefore, <b> the candidate must be
+                                    living in Sardinia, Italy</b>. Or at least in Italy.
+                            </p>
+                            <p>
+                                <b>Age - </b>The candidate should be within 21 and 35 years old, male or female (better
+                                if male).
+                            </p>
+                            <p>
+                                <b>S*x - </b>I'm not extremely comfortable with intimancy huh, I might take a bit. I
+                                mean I guess I could huh give heads and do relatively less intimate stuff (pls be clean)
+                                but I'd appreciate if the candidate understood I'd like going slow at first. In fact,
+                                asexual/demi folks would be more than welcome too!
+                            </p>
+                            <p>
+                                <b>Temper - </b>It would be wonderful if the candidate had a dick, much less if he was
+                                one himself.
+                            </p>
                         </section>
                     </div>
                 </div>
@@ -146,16 +160,22 @@
                         </button>
                     </div>
                     <div>
-                        <button class="button--netscape" style="font-size:small;" onclick="openTab('tab3',event)">Placeholder
+                        <button class="button--netscape" style="font-size:small;"
+                            onclick="openTab('tab3',event)">Placeholder
                         </button>
                     </div>
                 </div>
 
                 <div class="tab-content" id="tab1">
 
-                    <div class="sub-content-small">
+                    <div class="sub-content-small" style="margin-top: 30px;">
 
-                        //IMPLEMENT COMPATIBILITY TEST HERE
+                        <div id="survey-container"></div>
+                        <div class="survey-navigation">
+                            <button id="prev-button" class="button--netscape" style="font-size: 10px;">Previous</button>
+                            <span id="page-indicator"></span>
+                            <button id="next-button" class="button--netscape" style="font-size: 10px;">Next</button>
+                        </div>
 
                     </div>
 
@@ -203,7 +223,223 @@
         </div>
     </footer>
     <script>
+        // Survey configuration - this is where you define your questions
+        const surveyConfig = [
+            // Page 1
+            {
+                questions: [
+                    {
+                        id: 'q1a',
+                        text: 'Ya like nature? Like, green stuff, trees, forests...',
+                        type: 'binary',
+                        options: ['I love it!', 'I prefer civilization'],
+                        correctAnswer: 'I love it!',
+                        allAnswersCorrect: false
+                    },
+                   {
+                        id: 'q1b',
+                        text: 'Ya like huh, cuddles, phisical contact, uhm, and cats?',
+                        type: 'binary',
+                        options: ['Tolerable', 'Ew, don\'t touch me weirdo'],
+                        correctAnswer: 'Tolerable',
+                        allAnswersCorrect: false
+                    }
+                ]
+            },
+            // Page 2
+            {
+                questions: [
+                    {
+                        id: 'q2',
+                        text: 'JavaScript is the best programming language',
+                        type: 'agreement',
+                        correctAnswer: 4, // Strongly agree (scale: 1-5)
+                        allAnswersCorrect: false
+                    }
+                ]
+            },
+            // Page 3 (example with multiple questions per page)
+            {
+                questions: [
+                    {
+                        id: 'q3a',
+                        text: 'I enjoy taking surveys',
+                        type: 'agreement',
+                        correctAnswer: 5,
+                        allAnswersCorrect: true // Any answer is considered correct
+                    },
+                    {
+                        id: 'q3b',
+                        text: 'Which color do you prefer?',
+                        type: 'binary',
+                        options: ['Red', 'Blue'],
+                        correctAnswer: 'Blue',
+                        allAnswersCorrect: false
+                    }
+                ]
+            }
+        ];
 
+        // Survey state
+        let currentPage = 0;
+        const userAnswers = {};
+
+        // DOM elements
+        const surveyContainer = document.getElementById('survey-container');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const pageIndicator = document.getElementById('page-indicator');
+
+        // Initialize the survey
+        function initSurvey() {
+            showPage(currentPage);
+            updateNavigationButtons();
+        }
+
+        // Display a survey page
+        function showPage(pageIndex) {
+            if (pageIndex < 0 || pageIndex >= surveyConfig.length) return;
+
+            currentPage = pageIndex;
+            const page = surveyConfig[pageIndex];
+
+            // Build HTML for the page
+            let html = '';
+            page.questions.forEach(question => {
+                html += `<div class="question" id="q-${question.id}">`;
+                html += `<h3>${question.text}</h3>`;
+
+                if (question.type === 'binary') {
+                    question.options.forEach((option, i) => {
+                        const isChecked = userAnswers[question.id] === option ? 'checked' : '';
+                        html += `
+          <label>
+            <input type="radio" name="${question.id}" value="${option}" ${isChecked}>
+            ${option}
+          </label><br>
+        `;
+                    });
+                }
+                else if (question.type === 'agreement') {
+                    const levels = [
+                        'Strongly disagree',
+                        'Disagree',
+                        'Neutral',
+                        'Agree',
+                        'Strongly agree'
+                    ];
+
+                    const selectedValue = userAnswers[question.id] || '';
+
+                    html += '<div class="agreement-scale">';
+                    levels.forEach((level, i) => {
+                        const value = i + 1; // 1-5 scale
+                        const isChecked = selectedValue === value.toString() ? 'checked' : '';
+                        html += `
+          <label>
+            <input type="radio" name="${question.id}" value="${value}" ${isChecked}>
+            ${level}
+          </label>
+        `;
+                    });
+                    html += '</div>';
+                }
+
+                html += '</div>';
+            });
+
+            surveyContainer.innerHTML = html;
+            pageIndicator.textContent = `Page ${pageIndex + 1} of ${surveyConfig.length}`;
+            updateNavigationButtons();
+        }
+
+        // Save answers from current page
+        function saveCurrentPageAnswers() {
+            const page = surveyConfig[currentPage];
+
+            page.questions.forEach(question => {
+                const inputs = document.querySelectorAll(`input[name="${question.id}"]:checked`);
+                if (inputs.length > 0) {
+                    userAnswers[question.id] = inputs[0].value;
+                }
+            });
+        }
+
+        // Update navigation buttons state
+        function updateNavigationButtons() {
+            prevButton.disabled = currentPage === 0;
+            nextButton.textContent = currentPage === surveyConfig.length - 1 ? 'Finish' : 'Next';
+        }
+
+        // Calculate the survey score
+        function calculateScore() {
+            let totalPossible = 0;
+            let score = 0;
+
+            surveyConfig.forEach(page => {
+                page.questions.forEach(question => {
+                    if (question.allAnswersCorrect) {
+                        // All answers are correct, just add to the total
+                        totalPossible += 1;
+                        if (userAnswers[question.id]) {
+                            score += 1;
+                        }
+                    } else {
+                        // Need to check correctness
+                        const userAnswer = userAnswers[question.id];
+
+                        if (question.type === 'binary') {
+                            totalPossible += 1;
+                            if (userAnswer === question.correctAnswer) {
+                                score += 1;
+                            }
+                        }
+                        else if (question.type === 'agreement') {
+                            // For agreement scale, partial credit based on distance
+                            totalPossible += 1;
+                            if (userAnswer) {
+                                const distance = Math.abs(parseInt(userAnswer) - question.correctAnswer);
+                                // The farther from correct answer, the less points (linear scale)
+                                score += (4 - distance) / 4; // Gives 1 for correct, 0.75 for 1 away, etc.
+                            }
+                        }
+                    }
+                });
+            });
+
+            return {
+                score: Math.round(score * 100),
+                total: Math.round(totalPossible * 100),
+                percentage: totalPossible > 0 ? Math.round((score / totalPossible) * 100) : 0
+            };
+        }
+
+        // Event listeners
+        prevButton.addEventListener('click', () => {
+            saveCurrentPageAnswers();
+            showPage(currentPage - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            saveCurrentPageAnswers();
+
+            if (currentPage === surveyConfig.length - 1) {
+                // Show results
+                const results = calculateScore();
+                surveyContainer.innerHTML = `
+      <h2>Survey Complete!</h2>
+      <p>Your score: ${results.score} out of ${results.total} (${results.percentage}%)</p>
+    `;
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+                pageIndicator.style.display = 'none';
+            } else {
+                showPage(currentPage + 1);
+            }
+        });
+
+        // Initialize the survey when the page loads
+        window.addEventListener('DOMContentLoaded', initSurvey);
     </script>
     <script src="script.js"></script>
 </body>

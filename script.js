@@ -57,7 +57,7 @@ function showThemeToast(themeName) {
   });
 }
 
-//window.onload = () => openTab('tab4');
+window.onload = () => openTab('tab4');
 
 (function () {
   const savedTheme = localStorage.getItem('theme');
