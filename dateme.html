@@ -160,23 +160,38 @@
                         </button>
                     </div>
                     <div>
-                        <button class="button--netscape" style="font-size:small;"
-                            onclick="openTab('tab3',event)">Placeholder
+                        <button class="button--netscape" style="font-size:small;" onclick="openTab('tab3',event)">My
+                            anime crush (legal)
                         </button>
                     </div>
                 </div>
 
                 <div class="tab-content" id="tab1">
 
-                    <div class="sub-content-small" style="margin-top: 30px;">
+                    <div class="sub-content-small">
 
-                        <div id="survey-container"></div>
-                        <div class="survey-navigation">
-                            <button id="prev-button" class="button--netscape" style="font-size: 10px;">Previous</button>
-                            <span id="page-indicator"></span>
-                            <button id="next-button" class="button--netscape" style="font-size: 10px;">Next</button>
+                        <h1>
+                            <img src="resources/decorations/ANIMATED/GRAPHER.GIF">
+                            Are we compatible? Let's test it with the power of science!
+                        </h1>
+                        <p>
+                            Complete this small survey! If score more than 80% you will be given a direct discord link
+                            to chat with me <img src="resources/decorations/ANIMATED/MAIL_A.GIF"
+                                style="vertical-align: middle;">
+                        </p>
+                        <p>
+                            Good luck tehehehe~~
+                        </p>
+                        <div class="survey">
+                            <div id="survey-container"></div>
+                            <div class="survey-navigation">
+                                <p><br></p>
+                                <button id="prev-button" class="button--netscape"
+                                    style="font-size: 10px;">Previous</button>
+                                <span id="page-indicator"></span>
+                                <button id="next-button" class="button--netscape" style="font-size: 10px;">Next</button>
+                            </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -230,18 +245,26 @@
                 questions: [
                     {
                         id: 'q1a',
-                        text: 'Ya like nature? Like, green stuff, trees, forests...',
+                        text: '1: While visiting a city abroad, I want to...',
                         type: 'binary',
-                        options: ['I love it!', 'I prefer civilization'],
-                        correctAnswer: 'I love it!',
+                        options: ['Find cool nighclubs to party a lot!!', 'Visit a lot of museum to satisfy curiosity!!'],
+                        correctAnswer: 'Visit a lot of museum to satisfy curiosity!!',
                         allAnswersCorrect: false
                     },
-                   {
+                    {
                         id: 'q1b',
-                        text: 'Ya like huh, cuddles, phisical contact, uhm, and cats?',
+                        text: '2: Having one single boyfriend > having an harem of boyfriends',
                         type: 'binary',
-                        options: ['Tolerable', 'Ew, don\'t touch me weirdo'],
-                        correctAnswer: 'Tolerable',
+                        options: ['Agree', 'Disagree'],
+                        correctAnswer: 'Agree',
+                        allAnswersCorrect: true
+                    },
+                    {
+                        id: 'q1c',
+                        text: '3: In a relationship, two people should...',
+                        type: 'binary',
+                        options: ['Spend as much time together as possible!!', 'Giving each other space, even if it means spending less time toghether...'],
+                        correctAnswer: 'Giving each other space, even if it means spending less time toghether...',
                         allAnswersCorrect: false
                     }
                 ]
@@ -250,10 +273,18 @@
             {
                 questions: [
                     {
-                        id: 'q2',
-                        text: 'JavaScript is the best programming language',
+                        id: 'q2a',
+                        text: '4: Feets and armpits are body parts which can be s*xy af!',
                         type: 'agreement',
-                        correctAnswer: 4, // Strongly agree (scale: 1-5)
+                        correctAnswer: 5, // Strongly agree (scale: 1-5)
+                        allAnswersCorrect: false
+                    },
+                    {
+                        id: 'q2b',
+                        text: '5: We\'re free this evening!! It is (more often than not) better to...',
+                        type: 'binary',
+                        options: ['Invite a lot of guest, let\'s have a party!! Yuppiee!! Pizza!! Friends!!', 'I wanna lean on your shoulder while we watch/play something!! Hold your hand tight!!'],
+                        correctAnswer: 'I wanna lean on your shoulder while we watch/play something!! Hold your hand tight!!',
                         allAnswersCorrect: false
                     }
                 ]
@@ -263,18 +294,19 @@
                 questions: [
                     {
                         id: 'q3a',
-                        text: 'I enjoy taking surveys',
-                        type: 'agreement',
-                        correctAnswer: 5,
-                        allAnswersCorrect: true // Any answer is considered correct
+                        text: '6: We\'re on a holiday!!! I\'d strongly prefer...',
+                        type: 'binary',
+                        options: ['Spending all day at a beautiful beach!!', 'Exploring a lush forest like in a fantasy novel!!'],
+                        correctAnswer: 'Exploring a lush forest like in a fantasy novel!!',
+                        allAnswersCorrect: false
                     },
                     {
                         id: 'q3b',
-                        text: 'Which color do you prefer?',
+                        text: '7: I\'d define myself more like...',
                         type: 'binary',
-                        options: ['Red', 'Blue'],
-                        correctAnswer: 'Blue',
-                        allAnswersCorrect: false
+                        options: ['Exciting, fun, party animal!', 'Calm, relaxed, chill!'],
+                        correctAnswer: '',
+                        allAnswersCorrect: true
                     }
                 ]
             }
@@ -307,7 +339,7 @@
             let html = '';
             page.questions.forEach(question => {
                 html += `<div class="question" id="q-${question.id}">`;
-                html += `<h3>${question.text}</h3>`;
+                html += `<h3><br>${question.text}</h3>`;
 
                 if (question.type === 'binary') {
                     question.options.forEach((option, i) => {
@@ -427,9 +459,12 @@
                 // Show results
                 const results = calculateScore();
                 surveyContainer.innerHTML = `
-      <h2>Survey Complete!</h2>
-      <p>Your score: ${results.score} out of ${results.total} (${results.percentage}%)</p>
+      <h2>Test Completed!</h2>
+      <p>We are: ${results.percentage}% compatible!</p>
     `;
+                if (results.percentage <= 20) { surveyContainer.innerHTML += "<p>Well, that's a giga BRUH!! Though... one misses all the shot he doesn't take is that so? Also, there are a couple of question where every answer is correct, so you probably just clicked 'next' without answering. </p>"; } else if (results.percentage <= 40) { surveyContainer.innerHTML += "<p>It's definitely... something! Maybe we can be huh friends? Just kidding, feel free to date me if you feel like</p>"; } else if (results.percentage <= 60) { surveyContainer.innerHTML += "<p>We're sort of compatible. Perhaps we should meet or something</p>"; } else if (results.percentage <= 80) { surveyContainer.innerHTML += "<p>Woooow that's great!! It's definitely above sufficiency! That means we're compatible! Get in touch!</p>"; } else { surveyContainer.innerHTML += "<p>Well well well, look at you, you look so cute! It seems like we're very compatible! Huh, w-wanna be at l-least something with me? Like, a friend, or a boyfriend, or idk, an internet friend? Pls pls pls</p>"; }
+
+                surveyContainer.innerHTML += "<p>As for the Discord link, well I'm not really giving it away on the internet like this. It is sort of private. If you seriously wanna exchange some words pls get in touch on Reddit first, preferrably with a non-throwaway account."
                 prevButton.style.display = 'none';
                 nextButton.style.display = 'none';
                 pageIndicator.style.display = 'none';

@@ -29,7 +29,7 @@ function makeEffect(name) {
 function toggleTheme() {
   makeSound('click');
 
-  const themes = ['mint', 'desert', 'feminine'];
+  const themes = ['mint', 'feminine'];
   const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
 
   const currentIndex = themes.indexOf(currentTheme);
@@ -78,14 +78,13 @@ function openTab(tabId, event) {
   // Reset scale and opacity for all tab buttons
   const tabButtons = document.querySelectorAll('.tab-buttons button');
   tabButtons.forEach(btn => {
-    btn.style.transform = 'scale(1)';
-    btn.style.opacity = '1';
+    btn.classList.remove('button--netscape--forceactive'); 
   });
 
   // Scale up and fully show the clicked button
   if (event && event.currentTarget) {
-    event.currentTarget.style.transform = 'scale(1)';
-    event.currentTarget.style.opacity = '0.6';
+    const clickedButton = event.currentTarget;
+    clickedButton.classList.add('button--netscape--forceactive');
   }
 }
 
