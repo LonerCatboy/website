@@ -104,25 +104,31 @@
 
         <!-- Actual content -->
 
-        <div class="content" style="min-height: 100vh;">
-            <h1>This page is under construction, come back in like... a month, or contact me right away to not lose your
-                chance. You've already missed on friendship.</h1>
+        <div class="content" style="min-height: 85vh;">
+            <h1>This webpage is under construction! Sorry for the inconvenience!</h1>
+            <h1 style="text-align: center;">
+                <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;" class="horizontal-flip"> Welcome to my dating webpage!
+            <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;" ></h1>
+            
+            
             <section class="sub-content-small">
-
+            <h3>Why should you date me?</h3>
+            <p>Because ... //TODO complete here</p>
             </section>
 
             <div style="margin: 1.1rem;">
                 <div>
 
                     <button class="toggle--netscape big-text" type="button" aria-expanded="false">
-                        Hard requirements
+                       <img src="resources/icons/INFO/INFORM.GIF" style="height: 15px;" class=" img-pixel-art">
+                        &nbsp; Hard requirements
                     </button>
                     <div class="toggle-content" hidden style="max-width: 680px;">
                         <section class=" sub-content-small narrow-700">
                             <p>
                                 <b>Location - </b>I know I might lose like 95% of my target audience but I'm not
                                 interested in Internet-Only romantic relationships. Therefore, <b> the candidate must be
-                                    living in Sardinia, Italy</b>. Or at least in Italy <img src="resources/icons/ITALY.png" class="img_icon">
+                                    living in Sardinia, Italy</b>. Or at least in Italy <img src="resources/icons/ITALY.png" class="img_icon img-pixel-art">
                             </p>
                             <p>
                                 <b>Age - </b>The candidate should be within 21 and 35 years old, male or female (better
@@ -240,6 +246,7 @@
                         <img src="resources/image/characters/hikaru/hikaru2.png" class="img-decor img-limit-medium">
                         <img src="resources/image/characters/hikaru/hikaru3.png" class="img-decor img-limit-medium">
                         <img src="resources/image/characters/hikaru/hikaru4.png" class="img-decor img-limit-medium">
+                        <img src="resources/image/characters/hikaru/hikaruf-overlay.png" class="img-decor img-limit-medium" style="opacity: 0.01;">
                     </div>
                 </div>
                 <div class="tab-content" id="tab4" style="display:none;">
@@ -252,7 +259,10 @@
             </div>
 
 
-
+            
+            
+            
+            
 
         </div>
     </main>
@@ -500,7 +510,7 @@
       <h2>Test Completed!</h2>
       <p>We are: ${results.percentage}% compatible!</p>
     `;
-                if (results.percentage <= 20) { surveyContainer.innerHTML += "<p>Well, that's a giga BRUH!! Though... one misses all the shot he doesn't take is that so? Also, there are a couple of question where every answer is correct, so you probably just clicked 'next' without answering. </p>"; } else if (results.percentage <= 40) { surveyContainer.innerHTML += "<p>It's definitely... something! Maybe we can be huh friends? Just kidding, feel free to date me if you feel like</p>"; } else if (results.percentage <= 60) { surveyContainer.innerHTML += "<p>We're sort of compatible. Perhaps we should meet or something</p>"; } else if (results.percentage <= 80) { surveyContainer.innerHTML += "<p>Woooow that's great!! It's definitely above sufficiency! That means we're compatible! Get in touch!</p>"; } else { surveyContainer.innerHTML += "<p>Well well well, look at you, you look so cute! It seems like we're very compatible! Huh, w-wanna be at l-least something with me? Like, a friend, or a boyfriend, or idk, an internet friend? Pls pls pls</p>"; }
+                if (results.percentage <= 20) { surveyContainer.innerHTML += "<img src=\"resources/decorations/what.gif\"><p>Well, that's a giga BRUH!! Though... one misses all the shot he doesn't take is that so? Also, there are a couple of question where every answer is correct, so you probably just clicked 'next' without answering. </p>"; } else if (results.percentage <= 40) { surveyContainer.innerHTML += "<img src=\"resources/decorations/disappointment.gif\"><p>It's definitely... something! Maybe we can be huh friends? Just kidding, feel free to date me if you feel like</p>"; } else if (results.percentage <= 60) { surveyContainer.innerHTML += "<img src=\"resources/decorations/picard.gif\"><p>We're sort of compatible. Perhaps we should meet or something</p>"; } else if (results.percentage <= 80) { surveyContainer.innerHTML += "<img src=\"resources/decorations/picard.gif\"><p>Woooow that's great!! It's definitely above sufficiency! That means we're compatible! Get in touch!</p>"; } else { surveyContainer.innerHTML += "<img src=\"resources/decorations/you.gif\"><p>Well well well, look at you, you look so cute! It seems like we're very compatible! Huh, w-wanna be at l-least something with me? Like, a friend, or a boyfriend, or idk, an internet friend? Pls pls pls</p>"; }
 
                 surveyContainer.innerHTML += "<p>As for the Discord link, well I'm not really giving it away on the internet like this. It is sort of private. If you seriously wanna exchange some words pls get in touch on Reddit first, preferrably with a non-throwaway account."
                 prevButton.style.display = 'none';
