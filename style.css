@@ -287,11 +287,10 @@ p {
   margin-left: 1.5rem;
   border-width: 2px;
   border: 3px outset var(--color-header);
-    background-color: var(--color-header);
+  background-color: var(--color-header);
 }
 
 .tab-buttons {
-  background-color: var(--color-header);
   display: flex;
   flex-direction: row;
   justify-content: flex-start; /* changed from flex-end to flex-start */
