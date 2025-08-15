@@ -4,9 +4,7 @@ const videoIds = [
     { id: "DfK4MdFQyN8", title: "Fantasy ambience" },
     { id: "8kBlKM71pjc", title: "Cozy Animal Crossing music" },
     { id: "a2nk1cDYP2g", title: "Minecraft"},
-    { id: "hp-LPRbozoU", title: "Time" },
     { id: "oNXzMBA9VU4", title: "Windows XP Set Up" },
-    { id: "46BzOBWQXP8", title: "Relaxing Nintendo music" },
 ];
 
 let currentVideo = 0;
@@ -56,6 +54,7 @@ function onYouTubeIframeAPIReady() {
             }
         }
     });
+    pauseVideo(); // Start with video paused
 }
 
 function changeVideo(direction) {
@@ -204,5 +203,16 @@ function saveSeekToCookie(videoId, time) {
 function loadSeekFromCookie(videoId) {
     const match = document.cookie.match(new RegExp('(^| )yt_seek_' + videoId + '=([^;]+)'));
     return match ? parseInt(match[2]) : 0;
+}
+
+function showWinampPlayer() {
+    const winamp = document.getElementById("winamp-player");
+    winamp.style.display = "";
+}
+
+function hideWinampPlayer() {
+    const winamp = document.getElementById("winamp-player");
+    winamp.style.display = "none";
+    stopVideo();
 }
 

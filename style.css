@@ -133,9 +133,10 @@ hr {
 }
 
 .content {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto auto;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
+  background-color: var(--color-bg);
 }
 
 p {
@@ -283,9 +284,9 @@ p {
 }
 
 .tab-section {
-  width: 90%;
-  margin-top: 1.5rem;
-  margin-left: 1.5rem;
+  
+  margin: 1.5rem;
+  box-sizing: border-box;
   border-width: 2px;
   border: 3px outset var(--color-header);
   background-color: var(--color-header);
@@ -294,9 +295,10 @@ p {
 .tab-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start; /* changed from flex-end to flex-start */
-  align-items: flex-start;
-  margin: 5px;
+  justify-content: stretch;
+  align-items: stretch;
+  
+  margin: 0px 0px 0px 0px;
   padding: 0;
   border-radius: 0;
   gap: 0;
@@ -305,12 +307,17 @@ p {
 .tab-buttons>div {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .tab-buttons button {
   border-radius: 0;
   margin: 0;
+  width: 100%;
+  text-align: center;
+  align-items: center;
 }
+
 
 .tab-content {
   background-color: var(--color-header);
@@ -329,6 +336,7 @@ p {
   height: 8rem;
   left: 0;
   z-index: 10;
+  pointer-events: none;
 }
 
 .clickable-image {
@@ -497,7 +505,7 @@ p {
   background: var(--color-header-text);
   border-color: var(--color-brighter) var(--color-darker) var(--color-darker) var(--color-brighter);
   border-radius: 0;
-  border-width: 2px;
+  border-width: 3px;
   margin: 5px;
   cursor: pointer;
   display: inline-flex;
@@ -507,13 +515,16 @@ p {
   position: relative;
   white-space: nowrap;
   color: var(--color-header);
+  font-size: large;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges; /* fallback for older browsers */
 
   /* Zoom */
-  zoom: 1.5;
+  zoom: 1;
 
   &:hover,
   &:focus {
-    outline: 1.5px dotted var(--color-link);
+    outline: 2px dotted var(--color-link);
   }
 
   &:active {
@@ -579,7 +590,7 @@ p {
   background: var(--color-header-text);
   border-color: var(--color-brighter) var(--color-darker) var(--color-darker) var(--color-brighter);
   border-radius: 0;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   margin: 5px;
   cursor: pointer;
@@ -590,8 +601,8 @@ p {
   position: relative;
   white-space: nowrap;
   color: var(--color-header);
-  zoom: 1.5;
   min-width: 300px;
+  font-size: large;
 }
 
 .toggle--netscape:hover,
@@ -677,11 +688,13 @@ p {
     top: 95px;
     rotate: -5deg;
     scale: 0.70;
+    opacity: 0; /* Hide on mobile */
   }
 
   .button--netscape {
     min-width: inherit;
     width: 100%;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   .toggle--netscape {
@@ -690,17 +703,17 @@ p {
 
   .tab-section {
     max-width: 100%;
-    margin-left: 0;
   }
 
   .big-text {
     font-size: smaller;
   }
 
+  /*
   .sub-content {
     margin-left: 1.5rem;
     margin-top: 1.5rem;
-  }
+  }*/
 
   .sub-content-small {
     margin-top: 0;
@@ -716,13 +729,10 @@ p {
   .tab-buttons {
     flex-direction: column;
     justify-content: center;
-    max-width: auto;
-    min-width: auto;
-    width: 100%;
   }
 
   .tab-buttons div {
-    width: 95%;
+    width: 100%;
   }
 
   footer {
@@ -966,27 +976,29 @@ input[type=range] {
   display: flex;
   border-top: solid 1px var(--color-text);
   padding: 0;
+  margin-left: 5px;
 }
 
 .wa-control {
   font-family: monospace;
   margin: 2px;
   padding: 0px;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   font-size: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 12px;
 }
 
 .wa-fixed-topright {
   position: absolute;
   top: 1px;
   right: 1px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   z-index: 1000;
 }
 

@@ -37,6 +37,11 @@
                     </button>
                 </div>
 
+                <div>
+                    <button class="button--netscape hide-on-mobile" onclick="showWinampPlayer()">Spawn music player</em>
+                    </button>
+                </div>
+
             </nav>
         </div>
         <div></div>
@@ -47,9 +52,11 @@
         <!-- Music player -->
 
 
-        <div id="winamp-player" class="winamp-player hide-on-mobile">
+        <div id="winamp-player" class="winamp-player hide-on-mobile" style="display: none;">
             <div id="title-bar" class="title-bar">🎵 LonerAmp
-                <button class="button--netscape wa-control wa-fixed-topright" onclick="toggleVideoSize()">▼</button>
+                <button class="button--netscape wa-control wa-fixed-topright" style="margin-right: 20px;"
+                    onclick="toggleVideoSize()">▼</button>
+                <button class="button--netscape wa-control wa-fixed-topright" onclick="hideWinampPlayer()">✖</button>
             </div>
 
             <div class="player-wrapper">
@@ -91,7 +98,6 @@
             </div>
 
         </div>
-        </div>
 
 
 
@@ -105,30 +111,43 @@
         <!-- Actual content -->
 
         <div class="content" style="min-height: 85vh;">
-            <h1>This webpage is under construction! Sorry for the inconvenience!</h1>
             <h1 style="text-align: center;">
-                <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;" class="horizontal-flip"> Welcome to my dating webpage!
-            <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;" ></h1>
-            
-            
+                <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;"
+                    class="horizontal-flip"> Welcome to my dating webpage!
+                <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;">
+            </h1>
+
             <section class="sub-content-small">
-            <h3>Why should you date me?</h3>
-            <p>Because ... //TODO complete here</p>
+                <h3 style="font-style: italic;">
+                    Why should I date you?</h3>
+                <p>B-because life isn't just about <i>why</i>, it's about <i>why not</i>, nya~! Let's be adventurous
+                    together, meow! UwU</p>
+                <h3 style="font-style: italic;">Is the content of this webpage ironic?</h3>
+                <p>Nope nya! It's all sincere, just a little bit sparkly, meow~!</p>
+                <h3 style="font-style: italic;">How do I know if I qualify?</h3>
+                <p>Any hooman in the age range of any gender can qualify, nya! Just check the specs below, meow~! Also,
+                    pwease be in reasonable shape, not super duper chonky (sowwy, I don't wanna hurt anyone's feelings,
+                    but I'm not attracted to that, nya~)</p>
             </section>
 
             <div style="margin: 1.1rem;">
                 <div>
-
-                    <button class="toggle--netscape big-text" type="button" aria-expanded="false">
-                       <img src="resources/icons/INFO/INFORM.GIF" style="height: 15px;" class=" img-pixel-art">
-                        &nbsp; Hard requirements
+                    <button class="toggle--netscape" type="button" aria-expanded="false">
+                        <img src="resources/icons/INFO/INFORM.GIF" style="height: 15px;" class=" img-pixel-art">
+                        &nbsp; Hard requirements &nbsp;
+                        <img src="resources/icons/INFO/INFORM.GIF" style="height: 15px;" class=" img-pixel-art">
                     </button>
-                    <div class="toggle-content" hidden style="max-width: 680px;">
-                        <section class=" sub-content-small narrow-700">
+                    <div class="toggle-content" hidden>
+                        <section class=" sub-content-small">
+                            <p>
+                                Will you be my <b>L.A.S.T.</b> partner? Let's self assess the mandatory requirements by
+                                analyzing the following parameters <i>Location, Age, Sex, Temper</i>:
+                            </p>
                             <p>
                                 <b>Location - </b>I know I might lose like 95% of my target audience but I'm not
                                 interested in Internet-Only romantic relationships. Therefore, <b> the candidate must be
-                                    living in Sardinia, Italy</b>. Or at least in Italy <img src="resources/icons/ITALY.png" class="img_icon img-pixel-art">
+                                    living in Sardinia, Italy</b>. Or at least in Italy <img
+                                    src="resources/icons/ITALY.png" class="img_icon img-pixel-art">
                             </p>
                             <p>
                                 <b>Age - </b>The candidate should be within 21 and 35 years old, male or female (better
@@ -142,31 +161,50 @@
                             </p>
                             <p>
                                 <b>Temper - </b>It would be wonderful if the candidate had a dick, much less if he was
-                                one himself.
+                                one himself. The candidate should have a clear respect of boundaries, basic good
+                                manners, and common sense.
                             </p>
                         </section>
                     </div>
                 </div>
             </div>
 
+            <section class="sub-content-small">
+                <h3 style="font-style: italic;">Are you a neet?</h3>
+                <p>Tsk tsk!!! Not at all! I'm a busy kitty, working full time as a government employee and studying for my
+                    master degree, so I don't have much free time to chase yarn balls, meow~!</p>
+                <h3 style="font-style: italic;">Are you awkward?</h3>
+                <p>Nope, nya! I'm just a little shy sometimes, but super friendly once you get to know me, meow~!</p>
+                <h3 style="font-style: italic;">How do I get in touch?</h3>
+                <p>Send me a Reddit DM first, nya! There's a link in the footer (scroll down, down, down, and look to
+                    the left if you're on PC, meow~). I use Reddit on mobile, so it might take me a couple days to
+                    notice your DM, nya~ Reddit doesn't notify me, silly paws!</p>
+                <h3 style="font-style: italic;">Why did you make this</h3>
+                <p>I don't know how to talk to people face-to-face, nya~ This is the comfiest way for me to reach out,
+                    meow~!</p>
+            </section>
+
+            <h1 style="text-align: center;">~ * ~ If you wanna learn more ~ * ~</h1>
+
             <div class="tab-section">
                 <div class="tab-buttons">
                     <div>
-                        <button class="button--netscape" style="font-size:small;" onclick="openTab('tab1',event)">
-                            <img src="resources/icons/mcheartico.png" style="height: 10px;"> Compatibility test &nbsp;
-                            <img src="resources/icons/mcheartico.png" style="height: 10px;" class="horizontal-flip">
+                        <button class="button--netscape" onclick="openTab('tab1',event)">
+                            <img src="resources/icons/mcheartico.png" style="height: 1rem;"> &nbsp; Compatibility test
+                            &nbsp;
+                            <img src="resources/icons/mcheartico.png" style="height: 1rem;" class="horizontal-flip">
                         </button>
                     </div>
                     <div>
-                        <button class="button--netscape" style="font-size:small; position:relative; overflow:hidden;"
+                        <button class="button--netscape"
+                            style="position:relative; overflow:hidden; background-image: url('resources/decorations/animated-fire.gif'); background-repeat: repeat-x; background-size: 100px 100%; "
                             onclick="openTab('tab2',event)">
-                            <img src="resources/decorations/animated-fire.gif"
-                                style="position:absolute; left:0; top:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity: 0.8;">
+
                             <span style="position:relative; z-index:1;">The Hot Stuff</span>
                         </button>
                     </div>
                     <div>
-                        <button class="button--netscape" style="font-size:small;" onclick="openTab('tab3',event)">My
+                        <button class="button--netscape" onclick="openTab('tab3',event)">My
                             anime crush (legal)
                         </button>
                     </div>
@@ -178,7 +216,7 @@
 
                         <h1>
                             <img src="resources/decorations/ANIMATED/GRAPHER.GIF">
-                            Are we compatible? Let's test it with the power of science!
+                            Are we compatible? Let's test it!
                         </h1>
                         <p>
                             Complete this small survey! If score more than 80% you will be given a direct discord link
@@ -193,9 +231,10 @@
                             <div class="survey-navigation">
                                 <p><br></p>
                                 <button id="prev-button" class="button--netscape"
-                                    style="font-size: 10px;">Previous</button>
+                                    style="font-size:smaller;">Previous</button>
                                 <span id="page-indicator"></span>
-                                <button id="next-button" class="button--netscape" style="font-size: 10px;">Next</button>
+                                <button id="next-button" class="button--netscape"
+                                    style="font-size:smaller;">Next</button>
                             </div>
                         </div>
                     </div>
@@ -204,7 +243,7 @@
 
                 <div class="tab-content" id="tab2" style="display:none;">
 
-                    //SPICY STUFF AND SECRETS (soon)
+                    <h1>This part of the webpage is under construction! Sorry for the inconvenience!</h1>
 
                 </div>
                 <div class="tab-content" id="tab3" style="display:none;">
@@ -214,8 +253,8 @@
                             <button class="toggle--netscape" type="button" aria-expanded="false">
                                 <span class="hard-blink">Disclaimer</span>
                             </button>
-                            <div class="toggle-content" hidden style="max-width: 680px;">
-                                <section class=" sub-content-small narrow-700">
+                            <div class="toggle-content" hidden>
+                                <section class=" sub-content-small">
                                     <p>
                                         <b>Disclaimer: </b> the following is meant to be taken with a bit of irony in
                                         mind. Like, the
@@ -223,14 +262,19 @@
                                         particularly in
                                         the way of writing another style I'd call "cringecore", where I purposely write
                                         in a slightly
-                                        cringy way by design. That said, I'm not actually into teenagers. Anime characters
+                                        cringy way by design. That said, I'm not actually into teenagers. Anime
+                                        characters
                                         just look hot,
-                                        possibly due to the extremely simplified facial features that leave space for imagination. Not that there was
+                                        possibly due to the extremely simplified facial features that leave space for
+                                        imagination. Not that there was
                                         something wrong in
                                         having crush for fictional characters.
                                     </p>
                                     <p>
-                                        Like ok actually there shouldn't be any reason to put this disclaimer, but I don't know who will end up visiting this page, and people on the internet can be hateful/scary, some could even be upset at the idea of calling an anime character "cute". Maybe I'm overthinking.
+                                        Like ok actually there shouldn't be any reason to put this disclaimer, but I
+                                        don't know who will end up visiting this page, and people on the internet can be
+                                        hateful/scary, some could even be upset at the idea of calling an anime
+                                        character "cute". Maybe I'm overthinking.
                                     </p>
                                 </section>
                             </div>
@@ -246,7 +290,8 @@
                         <img src="resources/image/characters/hikaru/hikaru2.png" class="img-decor img-limit-medium">
                         <img src="resources/image/characters/hikaru/hikaru3.png" class="img-decor img-limit-medium">
                         <img src="resources/image/characters/hikaru/hikaru4.png" class="img-decor img-limit-medium">
-                        <img src="resources/image/characters/hikaru/hikaruf-overlay.png" class="img-decor img-limit-medium" style="opacity: 0.01;">
+                        <img src="resources/image/characters/hikaru/hikaruf-overlay.png"
+                            class="img-decor img-limit-medium" style="opacity: 0.01;">
                     </div>
                 </div>
                 <div class="tab-content" id="tab4" style="display:none;">
@@ -259,10 +304,10 @@
             </div>
 
 
-            
-            
-            
-            
+
+
+
+
 
         </div>
     </main>
