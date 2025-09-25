@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loner Catboy's Webpage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="resources/decorations/nyan-cat.gif" alt="Nyan Cat" class="nyan-cat hide-on-mobile"
+      onclick="makeSound('explosion')">
+    <div>
+      <h1 style="padding: 0; margin: 0;">
+        <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+        Welcome to Loner Catboy's World Wide Web Page!
+        <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+        <div class="minecraft-quote hide-on-mobile" id="quote-box">
+          Please enable Javascript!
+        </div>
+      </h1>
+      <h2 class="hide-on-very-small" id="subtitle">
+        Uh, it's nice to have you t-there huh!
+      </h2>
+      <nav>
+        <div>
+          <a href="index.html"></a>
+          <button class="button--netscape">
+            Home
+          </button>
+          </a>
+        </div>
+
+
+        <div>
+          <a href="friend.html">
+            <button class="button--netscape">
+              Click here if you come from r/lonely
+            </button>
+          </a>
+        </div>
+        
+                <div>
+          <a href="dateme.html">
+            <button class="button--netscape">
+              Click here if you come from r/r4r
+            </button>
+          </a>
+        </div>
+
+        <div>
+          <button class="button--netscape" onclick="toggleTheme()">Change theme</em>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+    <div></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <h1>
+        Welcome traveler...
+      </h1>
+      <div>
+        <div>
+          <button class="toggle--netscape big-text" type="button" aria-expanded="false">
+            About me
+          </button>
+          <div class="toggle-content" hidden>
+            <section class=" sub-content-small">
+              <h1>Stats</h1>
+              <p>
+                Age: <span id="age">Please enable Javascript</span>
+              </p>
+              <p>
+                Male, 1.65 cm / 5.4" x 51kg of 100% human being (alive and breathing, 100% dating material)<br>
+              </p>
+              <p>
+                Employed. That's not to take for granted this day huh?
+              </p>
+              <h1>
+                Likes
+              </h1>
+              <p>
+                Animation, food, animals, nature, cozyness, cuddles (omg I could never list this in my native language
+                I'd cringe so much but it's true rip), hentai (only stuff which WOULD NOT send you in jail), sandbox
+                games, people who
+                like to talk alot about hyperspecific random topics, people who like to listen to random topics, people
+                in general as long as they are at most one at a time, boys (21+), manga, horror, electronics, music,
+                vintage electronics,
+                pretty much everything which isn't listed on the following...
+              </p>
+              <h1>
+                Not likes >:(
+              </h1>
+              <p>
+                Snakes, the dark, the outside (won't touch grass >:(!!! ), crowded places, social networks, subscription
+                services, corporations, sports
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <h1>
+        Currently listening to...
+      </h1>
+      <div class="sub-content-smaller">
+        <div class="img-decor">
+          <lastfm-tracks user="LonerCatboy" tracks="10" apikey="52a2ff310daf3d47705d6ada38913b40"
+            interval="60"></lastfm-tracks>
+        </div>
+      </div>
+      <h1>Anime I watched recently</h1>
+      <div class="simple-anime-list sub-content-smaller">
+        <div id="anime-container"></div>
+      </div>
+
+      <script>
+        // Anime list with additional fields for personal notes and rating
+        const myAnimeList = [
+          {
+            title: "Ping Pong",
+            myRating: 1,  // 1 = liked, 0 = didn't like
+            myThoughts: "Normally I'm not into sports at all so why did I watched a sport anime? Well a friend of mine suggested me quite a lot so we watched it together (online) and it was... an experience. Amazing art style. Extremely fast paced. I don't give it a fuck about ping pong but I wasn't bored. Though it didn't make me cry"
+          },
+          {
+            title: "Yuri on Ice",
+            myRating: 1,
+            myThoughts: "I hoped to see some gay romance instead it was an amazingly well done anime about another sport I don't care at all. Amazing animation. Great characters. There was some sort of implied romance but the anime was so shy about showing it yet it was so persistent to become quite unrealistic. "
+          },
+          {
+            title: "Black Butler",
+            myRating: 0,
+            myThoughts: "When a friend described this thing to me I expected something like Courage the Cowardly dog or X-Files but as an Anime set in the XIX century, instead it was quite a boring mess with a story that doesn't make sense (apparently season 2 is not canon!?!?!?). Dropped mid season 5. Boooooooring."
+          },
+          {
+            title: "Porco Rosso",
+            myRating: 1,
+            myThoughts: "Liked it. The italian things written on the airplane design schemes didn't make sense at all, but who cares."
+          },
+          {
+            title: "Frieren",
+            myRating: 1,
+            myThoughts: "There should be nothing special to say about this, is just a fantasy anime like many others. I don't know why it felt so cozy to watch though. Quite nostaligc too. Why did I like it so much though? Perhaps it's the soundtrack written by Evan Call and the beautiful visuals, or maybe there is something more about this fantasy world I don't seem to grasp consciously, yet I feel so attracted to. That could be, perhaps, the continuous referring during the episodes to great adventures from a now far past. Perhaps, it reminds me of my childhood."
+          }
+        ];
+
+        // LADIES AND GENTLEMEN, HERE IT STARTS, IT'S ~~VIBE CODING~~, GO DEEPSEEK GO
+        // Fetch and display anime info
+        async function fetchAndDisplayAnime() {
+          const container = document.getElementById('anime-container');
+
+          for (const [index, animeEntry] of myAnimeList.entries()) {
+            try {
+              // Add delay between requests (500ms)
+              if (index > 0) {
+                await new Promise(resolve => setTimeout(resolve, 500));
+              }
+
+              const animeData = await searchAnime(animeEntry.title);
+              if (animeData) {
+                // Merge API data with personal notes
+                const completeData = {
+                  ...animeData,
+                  myRating: animeEntry.myRating,
+                  myThoughts: animeEntry.myThoughts
+                };
+                const animeElement = createAnimeElement(completeData);
+                container.appendChild(animeElement);
+              }
+            } catch (error) {
+              console.error(`Error fetching data for ${animeEntry.title}:`, error);
+              // Create placeholder for failed fetches with personal notes
+              const errorElement = document.createElement('div');
+              errorElement.className = 'anime-card';
+              errorElement.innerHTML = `
+          <div class="anime-info">
+            <h3>${animeEntry.title}</h3>
+            <p class="user-rating">${animeEntry.myRating ? 'I liked it' : 'I didn\'t like it'}</p>
+            <p class="user-thoughts">${animeEntry.myThoughts}</p>
+            <p>Could not load additional details</p>
+          </div>
+        `;
+              container.appendChild(errorElement);
+            }
+          }
+        }
+
+        // Search Kitsu.io for anime by title
+        async function searchAnime(title) {
+          try {
+            const response = await fetch(`https://kitsu.io/api/edge/anime?filter[text]=${encodeURIComponent(title)}`);
+            const data = await response.json();
+
+            if (data.data && data.data.length > 0) {
+              const anime = data.data[0].attributes;
+              return {
+                title: anime.canonicalTitle || anime.titles.en || anime.titles.en_jp || title,
+                image: anime.posterImage?.original || anime.posterImage?.medium || '',
+                description: anime.synopsis || 'No description available',
+                episodes: anime.episodeCount || 'Unknown',
+                status: anime.status || 'Unknown',
+                score: anime.averageRating ? (anime.averageRating / 10).toFixed(1) : null,
+                url: `https://kitsu.io/anime/${data.data[0].id}`
+              };
+            }
+            return null;
+          } catch (error) {
+            console.error('Error fetching from Kitsu:', error);
+            return null;
+          }
+        }
+
+        // Creates HTML element for an anime card
+        function createAnimeElement(anime) {
+          const element = document.createElement('div');
+          element.className = 'anime-card';
+
+          element.innerHTML = `
+      <a href="${anime.url}" target="_blank">
+        <img class="img-decor" style="max-width:100px" src="${anime.image}" alt="${anime.title}" onerror="this.src='https://via.placeholder.com/300x400?text=No+Image'">
+      </a>
+      <div class="anime-info">
+        <h2>${anime.title}</h2>
+        <p class="user-rating"><strong> Did I like it!?:</strong> ${anime.myRating ? 'Yes!!' : 'Nope nope nope'}</p>
+        <p class="user-thoughts"><strong>My own thoughts:</strong> ${anime.myThoughts}</p>
+        <p><strong>Episodes:</strong> ${anime.episodes}</p>
+        <p><strong>Status:</strong> ${anime.status}</p>
+        <p><strong>Description:</strong> ${anime.description.substring(0, 500)}... for more info click on the cover</p>
+      </div>
+    `;
+
+          return element;
+        }
+
+        // Start fetching and displaying when page loads
+        window.addEventListener('DOMContentLoaded', fetchAndDisplayAnime);
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <nav> <a href="https://www.reddit.com/user/MiserableLonerCatboy/">
+          <img src="resources/icons/EMAIL1.GIF" class="img_icon">
+          Reach me out
+        </a></nav>
+    </div>
+    <div>
+      <span>
+        Loner Catboy - 2025
+      </span>
+    </div>
+    <div class="footer-right">
+      <span> <img src="resources/icons/TURBONET.GIF" class="logo">
+      </span>
+      <span><img src="resources/icons/WINDOWS.GIF" class="logo"></span>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const birthDate = new Date("2000-06-12");
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      const dayDiff = today.getDate() - birthDate.getDate();
+      if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+      }
+
+      document.querySelectorAll('a[href^="http"]').forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+
+      document.getElementById("age").textContent = age;
+    });
+  </script>
+  <script src="script.js"></script>
+  <script src="lastfm.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huh? *blushes* </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="resources/decorations/nyan-cat.gif" alt="Nyan Cat" class="nyan-cat hide-on-mobile"
+            onclick="makeSound('explosion')">
+        <!-- IDK why I made this -->
+        <div>
+            <h1 style="padding: 0; margin: 0;">
+                <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+                Welcome to Loner Catboy's World Wide Web Page!
+                <img src="resources/icons/WORLD.GIF" class="img_icon hide-on-mobile">
+                <div class="minecraft-quote" id="quote-box"></div>
+            </h1>
+            <h2 class="hide-on-very-small" id="subtitle">
+                Uh, it's nice to have you t-there huh!
+            </h2>
+            <nav>
+                <div>
+                    <a href="index.html">
+                        <button class="button--netscape">
+                            Home
+                        </button>
+                    </a>
+                </div>
+
+                <div>
+                    <button class="button--netscape" onclick="toggleTheme()">Change theme</em>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="button--netscape hide-on-mobile" onclick="showWinampPlayer()">Spawn music player</em>
+                    </button>
+                </div>
+
+            </nav>
+        </div>
+        <div></div>
+    </header>
+
+    <main>
+
+        <!-- Music player -->
+
+
+        <div id="winamp-player" class="winamp-player hide-on-mobile" style="display: none;">
+            <div id="title-bar" class="title-bar">🎵 LonerAmp
+                <button class="button--netscape wa-control wa-fixed-topright" style="margin-right: 20px;"
+                    onclick="toggleVideoSize()">▼</button>
+                <button class="button--netscape wa-control wa-fixed-topright" onclick="hideWinampPlayer()">✖</button>
+            </div>
+
+            <div class="player-wrapper">
+                <div id="overlay" class="overlay wa-hide-on-big"></div>
+                <div id="player" class="player"></div>
+                <div>
+                    <p class="video-title wa-hide-on-big"><a id="video-title" href="#" target="_blank">Loading...</a>
+                    </p>
+                    <span class="wa-hide-on-big" style="margin-top: -20px;">Music is provided by the respective users on
+                        youtube</span>
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+            <div id="seek-container" class="seek-container">
+                <input type="range" id="seek-slider" min="0" max="100" value="0" step="1">
+            </div>
+
+            <div id="controls" class="controls">
+                <div>
+                    <button class="button--netscape wa-control" onclick="changeVideo(-1)">⏮</button>
+                </div>
+                <div>
+                    <button class="button--netscape wa-control" onclick="playVideo()">▶</button>
+                </div>
+                <div>
+                    <button class="button--netscape wa-control" onclick="pauseVideo()">⏸</button>
+                </div>
+                <div>
+                    <button class="button--netscape wa-control" onclick="stopVideo()">⏹</button>
+                </div>
+
+                <button class="button--netscape wa-control" onclick="changeVideo(1)">⏭</button>
+                <div id="volume-container" class="volume-container">
+                    Vol: <input type="range" min="0" max="100" value="50" onchange="setVolume(this.value)">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Music player -->
+        <script src="player.js"></script>
+        <!-- YouTube API -->
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <!-- Tehehe~ API means BEEES in italian, so silly -->
+
+
+        <!-- Actual content -->
+
+        <div class="content" style="min-height: 85vh;">
+            <h1 style="text-align: center;">
+                <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;"
+                    class="horizontal-flip"> Welcome to my dating webpage!
+                <img src="resources/decorations/mariostar.gif" style="height: 45px; vertical-align: middle;">
+            </h1>
+
+            <section class="sub-content-small">
+                <h3 style="font-style: italic;">
+                    Why should I date you?</h3>
+                <p>B-because life isn't just about <i>why</i>, it's about <i>why not</i>, nya~! Let's be adventurous
+                    together, meow! UwU</p>
+                <h3 style="font-style: italic;">Is the content of this webpage ironic?</h3>
+                <p>Nope nya! It's all sincere, just a little bit sparkly, meow~!</p>
+                <h3 style="font-style: italic;">How do I know if I qualify?</h3>
+                <p>Any hooman in the age range of any gender can qualify, nya! Just check the specs below, meow~! Also,
+                    pwease be in reasonable shape, not super duper chonky (sowwy, I don't wanna hurt anyone's feelings,
+                    but I'm not attracted to that, nya~)</p>
+            </section>
+
+            <div style="margin: 1.1rem;">
+                <div>
+                    <button class="toggle--netscape" type="button" aria-expanded="false">
+                        <img src="resources/icons/INFO/INFORM.GIF" style="height: 15px;" class=" img-pixel-art">
+                        &nbsp; Hard requirements &nbsp;
+                        <img src="resources/icons/INFO/INFORM.GIF" style="height: 15px;" class=" img-pixel-art">
+                    </button>
+                    <div class="toggle-content" hidden>
+                        <section class=" sub-content-small">
+                            <p>
+                                Will you be my <b>L.A.S.T.</b> partner? Let's self assess the mandatory requirements by
+                                analyzing the following parameters <i>Location, Age, Sex, Temper</i>:
+                            </p>
+                            <p>
+                                <b>Location - </b>I know I might lose like 95% of my target audience but I'm not
+                                interested in Internet-Only romantic relationships. Therefore, <b> the candidate must be
+                                    living in Sardinia, Italy</b>. Or at least in Italy <img
+                                    src="resources/icons/ITALY.png" class="img_icon img-pixel-art">
+                            </p>
+                            <p>
+                                <b>Age - </b>The candidate should be within 21 and 35 years old, male or female (better
+                                if male).
+                            </p>
+                            <p>
+                                <b>S*x - </b>I'm not extremely comfortable with intimancy huh, I might take a bit. I
+                                mean I guess I could huh give heads and do relatively less intimate stuff (pls be clean)
+                                but I'd appreciate if the candidate understood I'd like going slow at first. In fact,
+                                asexual/demi folks would be more than welcome too!
+                            </p>
+                            <p>
+                                <b>Temper - </b>It would be wonderful if the candidate had a dick, much less if he was
+                                one himself. The candidate should have a clear respect of boundaries, basic good
+                                manners, and common sense.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <section class="sub-content-small">
+                <h3 style="font-style: italic;">Are you a neet?</h3>
+                <p>Tsk tsk!!! Not at all! I'm a busy kitty, working full time as a government employee and studying for my
+                    master degree, so I don't have much free time to chase yarn balls, meow~!</p>
+                <h3 style="font-style: italic;">Are you awkward?</h3>
+                <p>Nope, nya! I'm just a little shy sometimes, but super friendly once you get to know me, meow~!</p>
+                <h3 style="font-style: italic;">How do I get in touch?</h3>
+                <p>Send me a Reddit DM first, nya! There's a link in the footer (scroll down, down, down, and look to
+                    the left if you're on PC, meow~). I use Reddit on mobile, so it might take me a couple days to
+                    notice your DM, nya~ Reddit doesn't notify me, silly paws!</p>
+                <h3 style="font-style: italic;">Why did you make this</h3>
+                <p>I don't know how to talk to people face-to-face, nya~ This is the comfiest way for me to reach out,
+                    meow~!</p>
+            </section>
+
+            <h1 style="text-align: center;">~ * ~ Learn more!? ~ * ~</h1>
+
+            <div class="tab-section">
+                <div class="tab-buttons">
+                    <div>
+                        <button class="button--netscape" onclick="openTab('tab1',event)">
+                            <img src="resources/icons/mcheartico.png" style="height: 1rem;"> &nbsp; Compatibility test
+                            &nbsp;
+                            <img src="resources/icons/mcheartico.png" style="height: 1rem;" class="horizontal-flip">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button--netscape"
+                            style="position:relative; overflow:hidden; background-image: url('resources/decorations/animated-fire.gif'); background-repeat: repeat-x; background-size: 100px 100%; "
+                            onclick="openTab('tab2',event)">
+
+                            <span style="position:relative; z-index:1;">The Hot Stuff</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button--netscape" onclick="openTab('tab3',event)">My
+                            anime crush (legal)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab1">
+
+                    <div>
+
+                        <h1>
+                            <img src="resources/decorations/ANIMATED/GRAPHER.GIF">
+                            Are we compatible? Let's test it!
+                        </h1>
+                        <p>
+                            Complete this small survey! If score more than 80% you will be given a direct discord link
+                            to chat with me <img src="resources/decorations/ANIMATED/MAIL_A.GIF"
+                                style="vertical-align: middle;">
+                        </p>
+                        <p>
+                            Good luck tehehehe~~
+                        </p>
+                        <div class="survey">
+                            <div id="survey-container"></div>
+                            <div class="survey-navigation">
+                                <p><br></p>
+                                <button id="prev-button" class="button--netscape"
+                                    style="font-size:smaller;">Previous</button>
+                                <span id="page-indicator"></span>
+                                <button id="next-button" class="button--netscape"
+                                    style="font-size:smaller;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="tab2" style="display:none;">
+
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <p>[ My nudes ]</p>
+                    </a>
+
+                </div>
+
+                
+                <div class="tab-content" id="tab3" style="display:none;">
+                    <div>
+                        <div style="margin-left: -10px;">
+
+                            <button class="toggle--netscape" type="button" aria-expanded="false">
+                                <span class="hard-blink">Disclaimer</span>
+                            </button>
+                            <div class="toggle-content" hidden>
+                                <section class=" sub-content-small">
+                                    <p>
+                                        <b>Disclaimer: </b> the following is meant to be taken with a bit of irony in
+                                        mind. Like, the
+                                        style of this whole website is a mix of vaporwave, straight up 90s style, and
+                                        particularly in
+                                        the way of writing another style I'd call "cringecore", where I purposely write
+                                        in a slightly
+                                        cringy way by design. That said, I'm not actually into teenagers. Anime
+                                        characters
+                                        just look hot,
+                                        possibly due to the extremely simplified facial features that leave space for
+                                        imagination. Not that there was
+                                        something wrong in
+                                        having crush for fictional characters.
+                                    </p>
+                                    <!---
+                                    <p>
+                                        Like ok actually there shouldn't be any reason to put this disclaimer, but I
+                                        don't know who will end up visiting this page, and people on the internet can be
+                                        hateful/scary, some could even be upset at the idea of calling an anime
+                                        character "cute". Maybe I'm overthinking.
+                                    </p>
+                                    <p>
+                                        Why am I doing this though. I spent an hideous amount of time making this shit and it doesn't represent me at all. I don't feel represented by this page it's just a facade. Potentially infinite HTML pages and I don't know how to fill them. I'm not that much interesting. I've heard enough from myself I wanna heard from someone else. Nothing I do or think or make or say makes any sense. I keep expressing myself in first person, it's all 'I', 'as for me' but there is nothing worthy discussing about me not because I'm not worthy but because I've througly explored myself so many times I feel like a 100% explored map in a videogame, there is nothing new to see. Soo hollow. I live pretending. I play roles. Boring roles, society is boring. I am boring as well. I cannot express my boredom with words. Walls made of flesh, like warths grows all around me. I am so numb. This world have little to offer to me. Luckily I can create my own worlds. You are losing your time here. There is nothing here. I am not.
+                                    </p>
+                                    <p>
+                                        Ehmm UwU other than that, Hikaru, sooo cwute! Meow! 
+                                    </p>
+                                    -->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1>Hikaru (from "The Summer Hikaru Died")</h1>
+                    <p>
+                        Look at him he's soooo cute ^^!
+                    </p>
+                    <div class="gallery">
+                        <img src="resources/image/characters/hikaru/hikaru1.png" class="img-decor img-limit-medium">
+                        <img src="resources/image/characters/hikaru/hikaru2.png" class="img-decor img-limit-medium">
+                        <img src="resources/image/characters/hikaru/hikaru3.png" class="img-decor img-limit-medium">
+                        <img src="resources/image/characters/hikaru/hikaru4.png" class="img-decor img-limit-medium">
+                        <img src="resources/image/characters/hikaru/hikaruf-overlay.png"
+                            class="img-decor img-limit-medium" style="opacity: 0.01;">
+                    </div>
+                </div>
+                <div class="tab-content" id="tab4" style="display:none;">
+                    <h1 style="text-align: center; padding: 0; margin: 0;">
+
+                        </em>
+                    </h1>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <nav> <a href="https://www.reddit.com/user/MiserableLonerCatboy/">
+                    <img src="resources/icons/EMAIL1.GIF" class="img_icon">
+                    Reach me out
+                </a></nav>
+        </div>
+        <div>
+            <span>
+                Loner Catboy - 2025
+            </span>
+        </div>
+        <div class="footer-right">
+            <span> <img src="resources/icons/TURBONET.GIF" class="logo">
+            </span>
+            <span><img src="resources/icons/WINDOWS.GIF" class="logo"></span>
+        </div>
+    </footer>
+    <script>
+        // Survey configuration - this is where you define your questions
+        const surveyConfig = [
+            // Page 1
+            {
+                questions: [
+                    {
+                        id: 'q1a',
+                        text: '1: While visiting a city abroad, I want to...',
+                        type: 'binary',
+                        options: ['Find cool nighclubs to party a lot!!', 'Visit a lot of museum to satisfy curiosity!!'],
+                        correctAnswer: 'Visit a lot of museum to satisfy curiosity!!',
+                        allAnswersCorrect: false
+                    },
+                    {
+                        id: 'q1b',
+                        text: '2: Having one single boyfriend > having an harem of boyfriends',
+                        type: 'binary',
+                        options: ['Agree', 'Disagree'],
+                        correctAnswer: 'Agree',
+                        allAnswersCorrect: true
+                    },
+                    {
+                        id: 'q1c',
+                        text: '3: In a relationship, two people should...',
+                        type: 'binary',
+                        options: ['Spend as much time together as possible!!', 'Giving each other space, even if it means spending less time toghether...'],
+                        correctAnswer: 'Giving each other space, even if it means spending less time toghether...',
+                        allAnswersCorrect: false
+                    }
+                ]
+            },
+            // Page 2
+            {
+                questions: [
+                    {
+                        id: 'q2a',
+                        text: '4: Feets and armpits are body parts which can be s*xy af!',
+                        type: 'agreement',
+                        correctAnswer: 5, // Strongly agree (scale: 1-5)
+                        allAnswersCorrect: false
+                    },
+                    {
+                        id: 'q2b',
+                        text: '5: We\'re free this evening!! It is (more often than not) better to...',
+                        type: 'binary',
+                        options: ['Invite a lot of guest, let\'s have a party!! Yuppiee!! Pizza!! Friends!!', 'I wanna lean on your shoulder while we watch/play something!! Hold your hand tight!!'],
+                        correctAnswer: 'I wanna lean on your shoulder while we watch/play something!! Hold your hand tight!!',
+                        allAnswersCorrect: false
+                    }
+                ]
+            },
+            // Page 3 (example with multiple questions per page)
+            {
+                questions: [
+                    {
+                        id: 'q3a',
+                        text: '6: We\'re on a holiday!!! I\'d strongly prefer...',
+                        type: 'binary',
+                        options: ['Spending all day at a beautiful beach!!', 'Exploring a lush forest like in a fantasy novel!!'],
+                        correctAnswer: 'Exploring a lush forest like in a fantasy novel!!',
+                        allAnswersCorrect: false
+                    },
+                    {
+                        id: 'q3b',
+                        text: '7: I\'d define myself more like...',
+                        type: 'binary',
+                        options: ['Exciting, fun, party animal!', 'Calm, relaxed, chill!'],
+                        correctAnswer: '',
+                        allAnswersCorrect: true
+                    }
+                ]
+            }
+        ];
+
+        // Survey state
+        let currentPage = 0;
+        const userAnswers = {};
+
+        // DOM elements
+        const surveyContainer = document.getElementById('survey-container');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const pageIndicator = document.getElementById('page-indicator');
+
+        // Initialize the survey
+        function initSurvey() {
+            showPage(currentPage);
+            updateNavigationButtons();
+        }
+
+        // Display a survey page
+        function showPage(pageIndex) {
+            if (pageIndex < 0 || pageIndex >= surveyConfig.length) return;
+
+            currentPage = pageIndex;
+            const page = surveyConfig[pageIndex];
+
+            // Build HTML for the page
+            let html = '';
+            page.questions.forEach(question => {
+                html += `<div class="question" id="q-${question.id}">`;
+                html += `<h3><br>${question.text}</h3>`;
+
+                if (question.type === 'binary') {
+                    question.options.forEach((option, i) => {
+                        const isChecked = userAnswers[question.id] === option ? 'checked' : '';
+                        html += `
+          <label>
+            <input type="radio" name="${question.id}" value="${option}" ${isChecked}>
+            ${option}
+          </label><br>
+        `;
+                    });
+                }
+                else if (question.type === 'agreement') {
+                    const levels = [
+                        'Strongly disagree',
+                        'Disagree',
+                        'Neutral',
+                        'Agree',
+                        'Strongly agree'
+                    ];
+
+                    const selectedValue = userAnswers[question.id] || '';
+
+                    html += '<div class="agreement-scale">';
+                    levels.forEach((level, i) => {
+                        const value = i + 1; // 1-5 scale
+                        const isChecked = selectedValue === value.toString() ? 'checked' : '';
+                        html += `
+          <label>
+            <input type="radio" name="${question.id}" value="${value}" ${isChecked}>
+            ${level}
+          </label>
+        `;
+                    });
+                    html += '</div>';
+                }
+
+                html += '</div>';
+            });
+
+            surveyContainer.innerHTML = html;
+            pageIndicator.textContent = `Page ${pageIndex + 1} of ${surveyConfig.length}`;
+            updateNavigationButtons();
+        }
+
+        // Save answers from current page
+        function saveCurrentPageAnswers() {
+            const page = surveyConfig[currentPage];
+
+            page.questions.forEach(question => {
+                const inputs = document.querySelectorAll(`input[name="${question.id}"]:checked`);
+                if (inputs.length > 0) {
+                    userAnswers[question.id] = inputs[0].value;
+                }
+            });
+        }
+
+        // Update navigation buttons state
+        function updateNavigationButtons() {
+            prevButton.disabled = currentPage === 0;
+            nextButton.textContent = currentPage === surveyConfig.length - 1 ? 'Finish' : 'Next';
+        }
+
+        // Calculate the survey score
+        function calculateScore() {
+            let totalPossible = 0;
+            let score = 0;
+
+            surveyConfig.forEach(page => {
+                page.questions.forEach(question => {
+                    if (question.allAnswersCorrect) {
+                        // All answers are correct, just add to the total
+                        totalPossible += 1;
+                        if (userAnswers[question.id]) {
+                            score += 1;
+                        }
+                    } else {
+                        // Need to check correctness
+                        const userAnswer = userAnswers[question.id];
+
+                        if (question.type === 'binary') {
+                            totalPossible += 1;
+                            if (userAnswer === question.correctAnswer) {
+                                score += 1;
+                            }
+                        }
+                        else if (question.type === 'agreement') {
+                            // For agreement scale, partial credit based on distance
+                            totalPossible += 1;
+                            if (userAnswer) {
+                                const distance = Math.abs(parseInt(userAnswer) - question.correctAnswer);
+                                // The farther from correct answer, the less points (linear scale)
+                                score += (4 - distance) / 4; // Gives 1 for correct, 0.75 for 1 away, etc.
+                            }
+                        }
+                    }
+                });
+            });
+
+            return {
+                score: Math.round(score * 100),
+                total: Math.round(totalPossible * 100),
+                percentage: totalPossible > 0 ? Math.round((score / totalPossible) * 100) : 0
+            };
+        }
+
+        // Event listeners
+        prevButton.addEventListener('click', () => {
+            saveCurrentPageAnswers();
+            showPage(currentPage - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            saveCurrentPageAnswers();
+
+            if (currentPage === surveyConfig.length - 1) {
+                // Show results
+                const results = calculateScore();
+                surveyContainer.innerHTML = `
+      <h2>Test Completed!</h2>
+      <p>We are: ${results.percentage}% compatible!</p>
+    `;
+                if (results.percentage <= 20) { surveyContainer.innerHTML += "<img src=\"resources/decorations/what.gif\"class=\"img-limit-medium\"><p>Well, that's a giga BRUH!! Though... one misses all the shot he doesn't take is that so? Also, there are a couple of question where every answer is correct, so you probably just clicked 'next' without answering. </p>"; } else if (results.percentage <= 40) { surveyContainer.innerHTML += "<img src=\"resources/decorations/disappointment.gif\"class=\"img-limit-medium\"><p>It's definitely... something! Maybe we can be huh friends? Just kidding, feel free to date me if you feel like</p>"; } else if (results.percentage <= 60) { surveyContainer.innerHTML += "<img src=\"resources/decorations/picard.gif\"class=\"img-limit-medium\"><p>We're sort of compatible. Perhaps we should meet or something</p>"; } else if (results.percentage <= 80) { surveyContainer.innerHTML += "<img src=\"resources/decorations/picard.gif\"class=\"img-limit-medium\"><p>Woooow that's great!! It's definitely above sufficiency! That means we're compatible! Get in touch!</p>"; } else { surveyContainer.innerHTML += "<img src=\"resources/decorations/you.gif\"class=\"img-limit-medium\"><p>Well well well, look at you, you look so cute! It seems like we're very compatible! Huh, w-wanna be at l-least something with me? Like, a friend, or a boyfriend, or idk, an internet friend? Pls pls pls</p>"; }
+
+                surveyContainer.innerHTML += "<p>As for the Discord link, well I'm not really giving it away on the internet like this. It is sort of private. If you seriously wanna exchange some words pls get in touch on Reddit first, preferrably with a non-throwaway account."
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+                pageIndicator.style.display = 'none';
+            } else {
+                showPage(currentPage + 1);
+            }
+        });
+
+        // Initialize the survey when the page loads
+        window.addEventListener('DOMContentLoaded', initSurvey);
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
